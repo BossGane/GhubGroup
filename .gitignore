@@ -1,0 +1,27 @@
+# Dependencies and generated outputs
+node_modules/
+dist/
+build/
+coverage/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+wp-config.php
+*.sql
+*.sql.gz
+.openai/
+# OS and logs
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.log
+logs/

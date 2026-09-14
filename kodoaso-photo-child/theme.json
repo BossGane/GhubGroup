@@ -1,0 +1,12 @@
+{
+  "version": 3,
+  "customTemplates": [
+    {
+      "name": "kodoaso-photo",
+      "title": "KODOASO 画像版",
+      "postTypes": [
+        "page"
+      ]
+    }
+  ]
+}
