@@ -6,7 +6,8 @@ const mime = {'.html':'text/html; charset=utf-8','.jpg':'image/jpeg','.jpeg':'im
 http.createServer((req, res) => {
   let pathname = decodeURIComponent((req.url || '/').split('?')[0]);
   if (pathname === '/') pathname = '/homepage-preview.html';
-  const file = path.join(root, pathname.replace(/^\/+/, ''));
+  let file = path.join(root, pathname.replace(/^\/+/, ''));
+  if (pathname.endsWith('/')) file = path.join(file, 'index.html');
   fs.readFile(file, (error, data) => {
     if (error) { res.statusCode = 404; res.end('Not Found'); return; }
     res.setHeader('Content-Type', mime[path.extname(file).toLowerCase()] || 'application/octet-stream');
