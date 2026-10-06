@@ -3,6 +3,20 @@
 こどあそマーケットのサイト制作・Windows引き継ぎ用ソースです。
 対象サイト：https://kodoaso.votreinc.jp/
 
+## Macでの再開
+
+Macへ引き継ぐ場合は、最初に `Mac引き継ぎ.md` を読んでください。GitHubからの取得、Codexでの開始方法、ローカル表示、作業終了時のPushまでを順番に記載しています。
+
+現在のGitHubリポジトリ：<https://github.com/BossGane/GhubGroup>
+
+```bash
+cd ~/Documents/CODEX/projects/GhubGroup
+git pull --ff-only origin main
+python3 -m http.server 8787 --bind 127.0.0.1
+```
+
+こどあそFESページ：<http://127.0.0.1:8787/events/kodomoaso-fes-2026/>
+
 ## Windowsでの再開
 
 1. このリポジトリをGitHub DesktopでClone、またはCode → Download ZIPで取得して解凍します。
@@ -41,12 +55,12 @@ py build_theme.py
 
 ## GitからWindowsへ引き継ぐ
 
-GitとPython 3を準備し、PowerShellで実行します。PrivateリポジトリのためGitHubの認証画面が出たらBossGaneでログインしてください。
+GitとPython 3を準備し、PowerShellで実行します。GitHubの認証画面が出たらBossGaneでログインしてください。
 
 ```powershell
 New-Item -ItemType Directory -Force I:\CODEX\projects | Out-Null
 Set-Location I:\CODEX\projects
-git clone https://github.com/BossGane/VOTRE-KODOASO.git
+git clone https://github.com/BossGane/GhubGroup.git VOTRE-KODOASO
 Set-Location VOTRE-KODOASO
 git config user.name "BossGane"
 git config user.email "ganecloudgt@gmail.com"
