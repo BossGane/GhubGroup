@@ -19,8 +19,8 @@ a{color:inherit;text-decoration:none}
 .hero h1 span{display:block}
 .hero-copy{font-size:clamp(17px,2vw,25px);line-height:1.7;max-width:620px}
 .hero-art img{width:min(100%,430px);display:block;margin:auto;mix-blend-mode:multiply}
-.hero-ticket{display:inline-flex;margin-top:24px;padding:16px 24px;border:1px solid var(--ink);font-weight:700;letter-spacing:.08em}
-.hero-ticket:hover{background:var(--ink);color:#fff}
+.hero-ticket{display:inline-flex;margin-top:24px;padding:16px 24px;border:1px solid #ff1493;background:#ff1493;color:#fff;font-weight:700;letter-spacing:.08em}
+.hero-ticket:hover{background:#111;border-color:#111;color:#fff}
 .section{padding:100px 8vw;border-bottom:1px solid var(--line)}
 .section-head{display:flex;justify-content:space-between;align-items:baseline;gap:24px;margin-bottom:56px}
 .section h2,.japanese-heading{font-size:clamp(38px,6vw,88px);letter-spacing:-.06em;line-height:1;margin:0}
@@ -30,24 +30,108 @@ a{color:inherit;text-decoration:none}
 .facts{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
 .fact{padding:32px 18px;border-right:1px solid var(--ink)}
 .fact:last-child{border-right:0}
-.fact small{display:block;font-size:12px;letter-spacing:.12em;margin-bottom:14px}
+.fact small{display:block;font-size:clamp(17px,1.6vw,24px);font-weight:700;letter-spacing:.08em;margin-bottom:14px}
 .fact strong{font-size:clamp(25px,3vw,46px);line-height:1.25}
+.event-day{color:#c9272c}
+.mobile-break{display:none}
 .program-section{background:var(--blue)}
 .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#b8c7ce;border:1px solid #b8c7ce}
 .tile{background:var(--blue);padding:34px;min-height:230px}
 .tile .label{display:block;font-size:clamp(22px,2.8vw,40px);font-weight:800;letter-spacing:0}
 .tile b{display:block;font-size:28px;margin:24px 0}
 .tile p,.access p{line-height:1.8;margin:0;font-size:15px}
+.program-intro{margin-top:90px}
+.program-intro .section-head{margin-bottom:36px}
+.program-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.program-item{display:flex;flex-direction:column;min-width:0;padding:20px;border:0;border-radius:6px;color:var(--ink);text-decoration:none;line-height:1.5;overflow:hidden}
+.program-item:nth-child(1){background:#ffd400}
+.program-item:nth-child(2){background:#18a9c7}
+.program-item:nth-child(3){background:#ff6b67}
+.program-item:nth-child(4){background:#91a9ff}
+.program-item:nth-child(5){background:#66d2ad}
+.program-item:nth-child(6){background:#ffab22}
+.program-item:nth-child(7){background:#f2a4dc}
+.program-item:nth-child(8){background:#72a7ff}
+.program-item:nth-child(9){background:#cce84a}
+.program-item:nth-child(10){background:#c3a7f1}
+.program-item:nth-child(11){background:#ff7f4f}
+.program-item:nth-child(12){background:#ffe253}
+.program-item:nth-child(13){background:#40c9a2}
+.program-item:nth-child(14){background:#ffcf56}
+.program-image-wrap{order:2;width:84%;aspect-ratio:16 / 10;overflow:hidden;background:transparent;margin:2px auto 18px;clip-path:polygon(7% 0,100% 0,100% 88%,83% 100%,0 100%,0 10%)}
+.program-item:nth-child(3n+2) .program-image-wrap{clip-path:polygon(0 8%,86% 0,100% 20%,96% 100%,10% 94%)}
+.program-item:nth-child(3n) .program-image-wrap{clip-path:polygon(8% 0,100% 10%,92% 92%,65% 100%,0 87%,4% 18%)}
+.program-image{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
+.program-item:hover .program-image{transform:scale(1.025)}
+.program-heading{order:1;display:flex;gap:14px;align-items:baseline;margin-bottom:14px}
+.program-item strong{font-size:clamp(22px,2vw,30px)}
+.program-item small{order:3;display:block;font-size:14px;font-weight:600;line-height:1.7;color:var(--ink)}
 .schedule{border-top:1px solid var(--ink)}
 .schedule-row{display:grid;grid-template-columns:190px 1fr;gap:24px;padding:20px 0;border-bottom:1px solid #aebec5;align-items:start}
 .schedule-row time{font-size:clamp(20px,2.2vw,30px);font-weight:700}
 .schedule-row strong{font-size:20px}
 .schedule-row p{margin:7px 0 0;line-height:1.7;font-size:14px}
+.feature-lead{font-size:clamp(18px,2.2vw,28px);line-height:1.65;max-width:900px;margin:0}
+.bubble-section{background:#e4ebe6;color:var(--ink)}
+.bubble-section h2{color:var(--ink)}
+.bubble-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:5vw;align-items:start}
+.bubble-photo{display:block;width:100%;aspect-ratio:16/7;object-fit:cover;margin-bottom:42px}
+.bubble-schedule{border-top:1px solid #aab8ad}
+.bubble-slot{display:grid;grid-template-columns:190px 1fr;gap:24px;padding:22px 0;border-bottom:1px solid #aab8ad}
+.bubble-slot time{font-size:clamp(22px,2.6vw,34px);font-weight:800}
+.bubble-slot h3{font-size:22px;margin:3px 0 8px}
+.bubble-slot p{color:#46534a;line-height:1.7;margin:0}
+.contest-section{background:#fff}
+.contest-section .section-head{align-items:flex-start}
+.contest-mark{display:flex;align-items:center;gap:18px}
+.contest-pictogram{display:block;width:104px;height:104px;flex:none}
+.contest-callout{display:grid;grid-template-columns:1.15fr .85fr;gap:6vw;align-items:start;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);padding:44px 0}
+.contest-copy h3{font-size:clamp(30px,4vw,58px);line-height:1.15;margin:0 0 22px}
+.contest-copy p{font-size:18px;line-height:1.8;margin:0}
+.entry-box{background:#111;color:#fff;padding:30px}
+.entry-box strong{display:block;font-size:clamp(26px,3vw,42px);margin-bottom:12px}
+.entry-box p{margin:0;line-height:1.8}
+.contest-start{padding-bottom:24px;margin-bottom:24px;border-bottom:1px solid #555}
+.contest-start small{display:block;font-size:11px;letter-spacing:.16em;margin-bottom:8px}
+.contest-start strong{font-size:clamp(50px,6vw,78px);line-height:1;margin:0}
+.prize-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:26px}
+.prize-item{border:1px solid var(--line);padding:24px}
+.prize-item small{display:block;font-weight:700;letter-spacing:.1em;margin-bottom:10px}
+.prize-item b{font-size:20px;line-height:1.5}
+.provisional{display:block;margin-top:10px;color:#666;font-size:12px}
 .music-lead{font-size:clamp(22px,3vw,38px);line-height:1.5;max-width:860px}
+.music-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:42px 0}
+.music-gallery img{display:block;width:100%;aspect-ratio:4 / 3;object-fit:cover}
 .music-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
 .music-item{background:var(--paper);padding:30px}
 .music-item time{display:block;font-size:28px;font-weight:800;margin-bottom:14px}
 .music-item h3{font-size:22px;margin:0 0 10px}
+.bmx-section{background:#f0f3ee}
+.bmx-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(260px,.6fr);gap:64px;align-items:end}
+.bmx-lead{font-size:clamp(25px,3.5vw,48px);font-weight:800;line-height:1.35;margin:0 0 20px}
+.bmx-copy{max-width:720px;line-height:1.9;margin:0}
+.bmx-links{border-top:1px solid var(--ink)}
+.bmx-link{display:flex;justify-content:space-between;gap:20px;padding:18px 0;border-bottom:1px solid var(--ink);color:var(--ink);font-weight:700;text-decoration:none}
+.bmx-link:hover{color:var(--blue-deep)}
+.bmx-photo{display:block;width:100%;aspect-ratio:16 / 7;object-fit:cover;margin:0 0 42px}
+.maze-section{padding-bottom:0}
+.maze-options{display:grid;grid-template-columns:1fr 1fr;margin:0 -7vw}
+.maze-option{min-height:360px;padding:58px 7vw}
+.maze-option:first-child{background:#d7c8a6;color:var(--ink)}
+.maze-option:last-child{background:#171717;color:#fff}
+.maze-option .label{color:inherit}
+.maze-option h3{font-size:clamp(34px,4vw,62px);line-height:1.2;margin:40px 0 20px}
+.maze-option p{max-width:520px;margin:0;font-size:16px;line-height:1.9}
+.maze-photo{display:block;width:100%;aspect-ratio:16 / 9;object-fit:cover;margin:32px 0 26px}
+.maze-symbol{width:72px;height:72px}
+.maze-symbol path,.maze-symbol rect,.maze-symbol circle{fill:none;stroke:currentColor;stroke-width:5;stroke-linecap:round;stroke-linejoin:round}
+.santa-section{background:#e74355;color:#fff}
+.santa-section .label{color:inherit}
+.santa-layout{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:56px;align-items:center}
+.santa-lead{font-size:clamp(28px,4vw,58px);font-weight:800;line-height:1.3;margin:0 0 24px}
+.santa-copy{font-size:17px;line-height:1.9;margin:0;max-width:600px}
+.santa-gallery{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.santa-gallery img{display:block;width:100%;aspect-ratio:4 / 3;object-fit:cover}
 .access-copy{max-width:760px;margin-bottom:38px}
 .map-wrap{border:1px solid var(--line);background:#dfe9ec}
 .map-wrap iframe{display:block;width:100%;height:430px;border:0}
@@ -69,32 +153,78 @@ a{color:inherit;text-decoration:none}
 .hero-art img{width:210px}
 .section{padding:68px 7vw}
 .section-head{align-items:flex-start;margin-bottom:34px}
-.grid,.facts,.about-layout,.music-grid{grid-template-columns:1fr}
+.contest-section .section-head{flex-direction:column;gap:14px}
+.contest-mark{width:100%;justify-content:space-between}
+.contest-pictogram{width:76px;height:76px}
+.mobile-break{display:block}
+.grid,.facts,.about-layout,.music-grid,.bubble-layout,.contest-callout,.prize-grid,.bmx-layout,.maze-options,.santa-layout{grid-template-columns:1fr}
+.program-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.program-item{padding:12px}
+.program-image-wrap{width:88%;aspect-ratio:4 / 3;margin:2px auto 14px}
+.program-heading{display:block;margin-bottom:6px}
+.program-item strong{display:block;font-size:17px;line-height:1.35}
+.program-item small{font-size:11px;line-height:1.55}
+.music-gallery{grid-template-columns:1fr 1fr;gap:8px;margin:28px 0}
+.music-gallery img:last-child{grid-column:1 / -1;aspect-ratio:16 / 9}
+.program-intro .section-head,#timetable.section-head{flex-direction:column;gap:12px}
 .about-layout{gap:30px}
 .about-image{order:2}
 .tile{min-height:0}
+.maze-option{min-height:300px;padding:42px 7vw}
+.santa-gallery{gap:8px}
 .fact{border-right:0;border-bottom:1px solid var(--ink)}
 .fact:last-child{border-bottom:0}
 .schedule-row{grid-template-columns:1fr;gap:8px}
+.bubble-slot{grid-template-columns:1fr;gap:8px}
 .map-wrap iframe{height:320px}
 .ticket{display:block}
 .ticket-button{width:100%;margin-top:28px}
 .footer{display:block;line-height:2}
 }
-
 </style>
 </head>
 <body>
 <header class="site-header"><a class="brand" href="../../homepage-preview.html">KODOASO</a><nav class="nav"><a href="#about">ABOUT</a><a href="#program">PROGRAM</a><a href="#access">ACCESS</a><a href="#ticket">TICKET</a></nav></header>
 <main>
-<section class="hero"><div><div class="eyebrow">2026.12.06 SUN / TODAGAWA GREEN PARK</div><h1><span>こどあそ</span><span>FES</span></h1><p class="hero-copy">想像を越える景色を、<br>家族の時間に。</p><a class="hero-ticket" href="#ticket">チケットを購入する ↗</a></div><div class="hero-art"><img src="kodomoaso-fes-logo.jpg" alt="こどあそFES ロゴ"></div></section>
+<section class="hero"><div><div class="eyebrow">2026.12.06 SUN / TODAGAWA GREEN PARK</div><h1><span>こどあそ</span><span>フェス</span></h1><p class="hero-copy">想像を越える景色を、<br>家族の時間に。</p><a class="hero-ticket" href="#ticket">チケットを購入する ↗</a></div><div class="hero-art"><img src="kodomoaso-fes-logo.jpg" alt="こどあそFES ロゴ"></div></section>
 <section class="section" id="about"><div class="section-head"><h2>ABOUT</h2><span class="label">KODOASO FES</span></div><div class="about-layout"><div><p class="intro">子供も大人も、<br>一緒に夢中になれる一日。</p><p class="hero-copy">遊び、出会い、心が動く。こどあそがつくる、年に一度の特別なお祭りです。</p></div><img class="about-image" src="../../service/event-assets/work/kodomoaso-fes.jpg" alt="こどあそFESの会場イメージ"></div></section>
-<section class="section" id="information"><div class="section-head"><h2>開催情報</h2><span class="label">EVENT INFORMATION</span></div><div class="facts"><div class="fact"><small>開催日</small><strong>2026年12月6日（日）</strong></div><div class="fact"><small>会場</small><strong>戸田川緑地</strong></div><div class="fact"><small>時間</small><strong>10:00〜15:30</strong></div></div></section>
-<section class="section program-section" id="program"><div class="section-head"><h2>PROGRAM</h2><span class="label">PLAY / MARKET / STAGE</span></div><div class="grid"><article class="tile"><span class="label">01 / PLAY</span><b>あそぶ</b><p>親子で楽しめる遊びと体験。思いきり動いて、やってみたいをひらきます。</p></article><article class="tile"><span class="label">02 / MARKET</span><b>であう</b><p>暮らしを彩る出店やフード。地域の人と、新しいお気に入りに出会えます。</p></article><article class="tile"><span class="label">03 / STAGE</span><b>ひろがる</b><p>音楽やパフォーマンスが、会場をひとつに。心に残る景色を届けます。</p></article></div><div class="section-head" style="margin-top:90px"><h2 class="japanese-heading">タイムテーブル</h2><span class="label">随時更新</span></div><div class="schedule"><div class="schedule-row"><time>10:00</time><div><strong>イベントスタート・段ボール迷路</strong><p>開場とともに遊びのプログラムが始まります。</p></div></div><div class="schedule-row"><time>10:00〜</time><div><strong>BMX体験 1回〜6回</strong><p>10分刻みで実施予定。受付方法は確定後に更新します。</p></div></div><div class="schedule-row"><time>11:00〜11:30</time><div><strong>バブルワークスのショー</strong></div></div><div class="schedule-row"><time>11:00</time><div><strong>岩本さん 音楽演奏</strong></div></div><div class="schedule-row"><time>12:00〜12:20</time><div><strong>岩本さん 音楽ワークショップ</strong><p>子供たちが音や楽器にふれる約20分間の体験です。</p></div></div><div class="schedule-row"><time>12:30〜13:00</time><div><strong>スリッパ飛ばし大会</strong></div></div><div class="schedule-row"><time>14:00</time><div><strong>岩本さん 音楽演奏</strong></div></div><div class="schedule-row"><time>15:30</time><div><strong>イベント終了</strong></div></div></div></section>
-<section class="section" id="music"><div class="section-head"><h2>音楽であそぶ</h2><span class="label">MUSIC PROGRAM</span></div><p class="music-lead">岩本さんによる音楽演奏と、子供たちが音や楽器にふれるワークショップを開催します。</p><div class="music-grid"><article class="music-item"><time>11:00</time><h3>音楽演奏</h3><p>会場で楽しむライブパフォーマンス。</p></article><article class="music-item"><time>12:00</time><h3>音楽ワークショップ</h3><p>約20分。親子で音を鳴らし、音楽を楽しみます。</p></article><article class="music-item"><time>14:00</time><h3>音楽演奏</h3><p>午後のライブパフォーマンス。</p></article></div></section>
-<section class="section access" id="access"><div class="section-head"><h2>ACCESS</h2><span class="label">戸田川緑地</span></div><p class="hero-copy access-copy">会場は名古屋市の戸田川緑地です。下の地図から位置をご確認ください。</p><div class="map-wrap"><iframe title="戸田川緑地 MAP" src="https://www.google.com/maps?q=%E6%88%B8%E7%94%B0%E5%B7%9D%E7%B7%91%E5%9C%B0&output=embed" loading="lazy"></iframe></div><div class="parking"><h3>駐車場無料</h3><p>戸田川緑地の第1〜第5駐車場を無料でご利用いただけます。当日は混雑が予想されるため、時間に余裕をもってお越しください。</p><img class="parking-map" src="access-parkmap-2026.png" alt="戸田川緑地 第1〜第5駐車場の位置図"></div></section>
+<section class="section" id="information"><div class="section-head"><h2>開催情報</h2><span class="label">EVENT INFORMATION</span></div><div class="facts"><div class="fact"><small>開催日</small><strong>2026年12月6日<span class="event-day">（日）</span></strong></div><div class="fact"><small>会場</small><strong>戸田川緑地</strong></div><div class="fact"><small>時間</small><strong>10:00〜15:30</strong></div></div></section>
+<section class="section program-section" id="program">
+<div class="section-head"><h2>PROGRAM</h2><span class="label">PLAY / MARKET / STAGE</span></div>
+<div class="grid"><article class="tile"><span class="label">01 / PLAY</span><b>あそぶ</b><p>親子で楽しめる遊びと体験。思いきり動いて、やってみたいをひらきます。</p></article><article class="tile"><span class="label">02 / MARKET</span><b>であう</b><p>暮らしを彩る出店やフード。地域の人と、新しいお気に入りに出会えます。</p></article><article class="tile"><span class="label">03 / STAGE</span><b>ひろがる</b><p>音楽やパフォーマンスが、会場をひとつに。心に残る景色を届けます。</p></article></div>
+<div class="program-intro"><div class="section-head"><h2 class="japanese-heading">企画紹介</h2><span class="label">EVENT CONTENTS</span></div><div class="program-list">
+<a class="program-item" href="#bubble-works"><div class="program-image-wrap"><img class="program-image" src="../../service/event-assets/work/todagawa-night-bubble.jpg" alt="バブルワークスのシャボン玉ショー"></div><div class="program-heading"><strong>バブルワークスと遊ぼう</strong></div><small>空いっぱいに広がるシャボン玉のショーと、親子で自由に楽しめる遊び場です。</small></a>
+<a class="program-item" href="#music"><div class="program-image-wrap"><img class="program-image" src="program-assets/iwamoto-03.jpg" alt="音楽家の岩本象一さん"></div><div class="program-heading"><strong>音楽家と遊ぼう！</strong></div><small>音楽をただ「聴く」だけではなく、一緒に音を鳴らして、感じて“音で遊ぶ”体験を。</small></a>
+<a class="program-item" href="#bmx"><div class="program-image-wrap"><img class="program-image" src="program-assets/bmx-01.jpg" alt="子供たちがBMXを体験する様子"></div><div class="program-heading"><strong>BMX</strong></div><small>講師と一緒に走って、曲がって、自転車を操る楽しさに親子で挑戦します。</small></a>
+<a class="program-item" href="#cardboard-maze"><div class="program-image-wrap"><img class="program-image" src="program-assets/cardboard-maze-01.jpg" alt="巨大段ボール迷路"></div><div class="program-heading"><strong>段ボール迷路</strong></div><small>巨大迷路と暗闇探検。ドキドキしながら道を探して、ゴールを目指そう。</small></a>
+<a class="program-item" href="#slipper-contest"><div class="program-image-wrap"><img class="program-image" src="program-assets/slipper-throw-commons.jpg" alt="スリッパを投げて遊ぶ様子"></div><div class="program-heading"><strong>スリッパ飛ばし大会</strong></div><small>大人も子供も思いきりスリッパを飛ばして、豪華景品をつかみ取ろう。</small></a>
+<a class="program-item" href="#santa-arrives"><div class="program-image-wrap"><img class="program-image" src="program-assets/santa-01.jpg" alt="サンタクロースの写真"></div><div class="program-heading"><strong>サンタ</strong></div><small>こどあそにサンタクロースが登場。家族の冬の思い出をつくる特別な時間です。</small></a>
+<!-- Provisional photo: https://www.pexels.com/photo/food-trucks-on-a-grass-field-16077805/ -->
+<a class="program-item" href="#program"><div class="program-image-wrap"><img class="program-image" src="program-assets/food-truck-pexels.jpg" alt="芝生広場に並ぶキッチンカー"></div><div class="program-heading"><strong>キッチンカー</strong></div><small>家族で味わいたいフードやドリンクが集合。お気に入りの一品を見つけよう。</small></a>
+<a class="program-item" href="#program"><div class="program-image-wrap"><img class="program-image" src="../../service/event-assets/work/kodomoaso-fes.jpg" alt="体験ワークショップの仮画像"></div><div class="program-heading"><strong>体験ワークショップ</strong></div><small>つくる、試す、夢中になる。子供の好奇心をひらく体験がそろいます。</small></a>
+<!-- Provisional photo: https://www.pexels.com/photo/a-kid-planting-seeds-on-the-ground-soil-7782192/ -->
+<a class="program-item" href="#program"><div class="program-image-wrap"><img class="program-image" src="program-assets/farming-pexels.jpg" alt="子供が土に種を植える農業体験"></div><div class="program-heading"><strong>農業体験</strong></div><small>土や作物にふれながら、育てることや農業の面白さを親子で体験します。</small></a>
+<a class="program-item" href="#program"><div class="program-image-wrap"><img class="program-image" src="program-assets/election-01.jpg" alt="こども選挙の結果発表"></div><div class="program-heading"><strong>こども選挙</strong></div><small>自分で考えて一票を選ぶ、子供たちのための小さな選挙体験です。</small></a>
+<!-- Provisional photo: https://www.pexels.com/photo/children-painting-in-the-art-class-8382373/ -->
+<a class="program-item" href="#program"><div class="program-image-wrap"><img class="program-image" src="program-assets/painting-pexels.jpg" alt="絵画教室で自由に絵を描く子供たち"></div><div class="program-heading"><strong>お絵かきで遊ぼう</strong></div><small>上手や正解にとらわれず、自由な発想で思いきり絵を描いて遊びます。</small></a>
+<!-- Provisional photo: https://www.pexels.com/photo/children-reading-books-8466915/ -->
+<a class="program-item" href="#program"><div class="program-image-wrap"><img class="program-image" src="program-assets/reading-pexels.jpg" alt="絵本を読む子供たち"></div><div class="program-heading"><strong>えほん専門士と遊ぼう</strong></div><small>えほん専門士と一緒に、物語の世界を見て、聞いて、親子で楽しみます。</small></a>
+<!-- Provisional photo: https://www.pexels.com/photo/joyful-children-playing-indoors-with-bamboo-35105829/ -->
+<a class="program-item" href="#program"><div class="program-image-wrap"><img class="program-image" src="program-assets/bamboo-pexels.jpg" alt="竹のおもちゃで遊ぶ子供たち"></div><div class="program-heading"><strong>竹で遊ぼう</strong></div><small>自然素材の竹にふれ、工夫しながら昔ながらの遊びやものづくりに挑戦します。</small></a>
+<!-- Provisional photo: https://www.pexels.com/photo/a-boy-and-a-girl-looking-at-a-map-8083371/ -->
+<a class="program-item" href="#program"><div class="program-image-wrap"><img class="program-image" src="program-assets/stamp-adventure-pexels.jpg" alt="地図を手に冒険する子供たち"></div><div class="program-heading"><strong>スタンプを探して冒険しよう！</strong></div><small>会場を巡って隠れたスタンプを集める、家族みんなの小さな冒険です。</small></a>
+</div></div>
+<div class="section-head" id="timetable" style="margin-top:90px"><h2 class="japanese-heading">タイムテーブル</h2><span class="label">随時更新</span></div><div class="schedule"><div class="schedule-row" id="cardboard-maze-schedule"><time>10:00</time><div><strong>イベントスタート・段ボール迷路</strong><p>開場とともに遊びのプログラムが始まります。</p></div></div><div class="schedule-row"><time>10:00〜</time><div><strong>BMX体験 1回〜6回</strong><p>10分刻みで実施予定。受付方法は確定後に更新します。</p></div></div><div class="schedule-row"><time>10:30〜11:00</time><div><strong>バブルワークス シャボン玉ショー</strong></div></div><div class="schedule-row"><time>11:00</time><div><strong>岩本さん 音楽演奏</strong></div></div><div class="schedule-row"><time>11:30〜12:30</time><div><strong>シャボン玉の遊び場</strong></div></div><div class="schedule-row"><time>12:00〜12:20</time><div><strong>岩本さん 音楽ワークショップ</strong><p>子供たちが音や楽器にふれる約20分間の体験です。</p></div></div><div class="schedule-row"><time>12:30〜13:00</time><div><strong>スリッパ飛ばし大会</strong></div></div><div class="schedule-row"><time>13:00〜13:30</time><div><strong>バブルワークス シャボン玉ショー</strong></div></div><div class="schedule-row"><time>14:00</time><div><strong>岩本さん 音楽演奏</strong></div></div><div class="schedule-row" id="santa-program"><time>14:30〜15:30</time><div><strong>サンタクロース</strong><p>時間内に2回登場予定です。</p></div></div><div class="schedule-row"><time>15:30</time><div><strong>イベント終了</strong></div></div></div>
+</section>
+<section class="section bubble-section" id="bubble-works"><div class="section-head"><h2>BUBBLE WORKS</h2><span class="label">SHOW / PLAYGROUND</span></div><img class="bubble-photo" src="../../service/event-assets/work/todagawa-night-bubble.jpg" alt="バブルワークスのシャボン玉ショー"><div class="bubble-layout"><div><p class="feature-lead">午前と午後のシャボン玉ショーと、自由に楽しめる遊び場。家族みんなでシャボン玉の景色を楽しめるプログラムです。</p></div><div class="bubble-schedule"><article class="bubble-slot"><time>10:30〜11:00</time><div><h3>シャボン玉ショー</h3><p>午前の空いっぱいに広がるシャボン玉を楽しもう。</p></div></article><article class="bubble-slot"><time>11:30〜12:30</time><div><h3>シャボン玉の遊び場</h3><p>子供たちが自分で遊べる体験時間です。</p></div></article><article class="bubble-slot"><time>13:00〜13:30</time><div><h3>シャボン玉ショー</h3><p>午後から来場する家族も楽しめる2回目のショー。</p></div></article></div></div></section>
+<section class="section contest-section" id="slipper-contest"><div class="section-head"><h2>スリッパ飛ばし<span class="mobile-break"></span>大会</h2><div class="contest-mark"><svg class="contest-pictogram" viewBox="0 0 160 160" role="img" aria-labelledby="slipper-icon-title slipper-icon-desc"><title id="slipper-icon-title">スリッパ飛ばし大会</title><desc id="slipper-icon-desc">丸みのある足から室内スリッパが飛び出すポップなピクトグラム</desc><path d="M16 23h39l8 69c1 11 8 19 18 21l25-4c9-2 17 4 18 12 1 9-5 17-14 19l-34 7c-18 4-34-8-36-26z" fill="#111"/><g fill="none" stroke="#111" stroke-linecap="round" stroke-width="6"><path d="M86 101c6-20 17-36 33-48"/><path d="M98 106c7-19 17-31 30-40"/></g><g transform="translate(94 13) rotate(-12 35 27)"><path d="M3 39h72c4 0 5 5 2 7l-9 7c-3 2-7 3-11 3H9c-5 0-8-3-8-8v-5c0-2 1-3 2-4z" fill="#111"/><path d="M27 39l6-25h14c15 1 27 9 35 25z" fill="#111"/><path d="M8 44h64" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="4"/></g><g fill="none" stroke="#111" stroke-linecap="round" stroke-width="5"><path d="m143 20 9-7"/><path d="m147 31 10-1"/><path d="m144 41 9 6"/></g></svg><span class="label">ENTRY CLOSE / 12:00</span></div></div><div class="contest-callout"><div class="contest-copy"><h3>飛ばせ、ねらえ、<br>豪華景品をつかみ取れ。</h3><p>大人の部と子供の部で開催。思いきりスリッパを飛ばして、会場の一番を目指そう。各部門の優勝者には豪華景品をプレゼントします。</p><div class="prize-grid"><div class="prize-item"><small>大人の部 優勝賞品</small><b>ファミリーおでかけギフト<br>10,000円相当</b><span class="provisional">※仮設定・景品は変更予定です</span></div><div class="prize-item"><small>子供の部 優勝賞品</small><b>人気おもちゃ＆<br>お菓子セット</b><span class="provisional">※仮設定・景品は変更予定です</span></div></div></div><aside class="entry-box"><div class="contest-start"><small>START</small><strong>12:30</strong></div><span class="label">ENTRY</span><strong>参加無料</strong><p>当日12:00までに会場でエントリーしてください。</p></aside></div></section>
+<section class="section" id="music"><div class="section-head"><h2>音楽家と遊ぼう！</h2><span class="label">MUSIC PROGRAM</span></div><p class="music-lead">音楽家・岩本象一さんと、音楽をただ「聴く」だけではなく、一緒に音を鳴らして、感じて“音で遊ぶ”体験を。</p><div class="music-gallery"><img src="program-assets/iwamoto-01.jpg" alt="演奏中の音楽家・岩本象一さん"><img src="program-assets/iwamoto-02.jpg" alt="楽器を演奏する岩本象一さん"><img src="program-assets/iwamoto-03.jpg" alt="音の道具を手にする岩本象一さん"></div><div class="music-grid"><article class="music-item"><time>11:00</time><h3>音楽演奏</h3><p>会場で楽しむライブパフォーマンス。</p></article><article class="music-item"><time>12:00</time><h3>音楽ワークショップ</h3><p>約20分。親子で音を鳴らし、音楽を楽しみます。</p></article><article class="music-item"><time>14:00</time><h3>音楽演奏</h3><p>午後のライブパフォーマンス。</p></article></div></section>
+<section class="section bmx-section" id="bmx"><div class="section-head"><h2>BMX</h2><span class="label">RIDE / CHALLENGE</span></div><img class="bmx-photo" src="program-assets/bmx-02.jpg" alt="サムライドBMXの講師による実演"><div class="bmx-layout"><div><p class="bmx-lead">サムライドBMX</p><p class="bmx-copy">はじめてでも楽しめるBMX体験。講師と一緒に、自転車を操る面白さと新しい動きに挑戦します。</p></div><div class="bmx-links"><a class="bmx-link" href="https://www.instagram.com/samuride_bmxclub/" target="_blank" rel="noopener noreferrer"><span>サムライドBMX</span><span>Instagram ↗</span></a><a class="bmx-link" href="https://www.instagram.com/daichiteshigram/" target="_blank" rel="noopener noreferrer"><span>講師</span><span>Instagram ↗</span></a></div></div></section>
+<section class="section maze-section" id="cardboard-maze"><div class="section-head"><h2>段ボール迷路</h2><span class="label">MAZE ADVENTURE</span></div><div class="maze-options"><article class="maze-option"><div><span class="label">01 / GIANT MAZE</span><h3>巨大段ボール迷路</h3><p>家族で道を探しながら、段ボールでできた大きな迷路のゴールを目指そう。</p></div><img class="maze-photo" src="program-assets/cardboard-maze-01.jpg" alt="体育館いっぱいに広がる巨大段ボール迷路"><svg class="maze-symbol" viewBox="0 0 80 80" role="img" aria-label="迷路のアイコン"><path d="M12 68V12h56v56H28V28h24v24H40V40"/></svg></article><article class="maze-option"><div><span class="label">02 / DARK EXPLORATION</span><h3>暗闇探検</h3><p>光の少ない迷路を手探りで進む、少しドキドキする探検コースです。</p></div><img class="maze-photo" src="program-assets/cardboard-maze-02.jpg" alt="子供たちが挑戦する段ボール迷路"><svg class="maze-symbol" viewBox="0 0 80 80" role="img" aria-label="暗闇探検のアイコン"><circle cx="34" cy="40" r="13"/><path d="M47 32l20-12M49 40h22M47 48l20 12M15 60l10-10"/></svg></article></div></section>
+<section class="section santa-section" id="santa-arrives"><div class="section-head"><h2>サンタがやって来る。</h2><span class="label">CHRISTMAS SPECIAL</span></div><div class="santa-layout"><div><p class="santa-lead">こどあそで出会う、<br>特別なサンタクロース。</p><p class="santa-copy">会場にサンタクロースが登場します。家族で写真を撮ったり、クリスマスの空気を一緒に楽しんだり。冬の一日を彩る特別な時間です。</p></div><div class="santa-gallery"><img src="program-assets/santa-01.jpg" alt="プレゼントに囲まれたサンタクロース"><img src="program-assets/santa-02.jpg" alt="明かりに包まれたサンタクロース"></div></div></section>
+<section class="section access" id="access"><div class="section-head"><h2>ACCESS</h2><span class="label">戸田川緑地</span></div><p class="hero-copy access-copy">会場は名古屋市の戸田川緑地です。第一駐車場の北側の芝生広場です。下の地図から位置をご確認ください。</p><div class="map-wrap"><iframe title="戸田川緑地 MAP" src="https://www.google.com/maps?q=%E6%88%B8%E7%94%B0%E5%B7%9D%E7%B7%91%E5%9C%B0&output=embed" loading="lazy"></iframe></div><div class="parking"><h3>駐車場無料</h3><p>戸田川緑地の第1〜第5駐車場を無料でご利用いただけます。当日は混雑が予想されるため、時間に余裕をもってお越しください。</p><img class="parking-map" src="access-parkmap-2026.png" alt="戸田川緑地 第1〜第5駐車場の位置図"></div></section>
 <section class="section ticket" id="ticket"><div><h2>TICKET</h2><p>チケット販売サイトは準備中です。公開後、このボタンから購入ページへ移動できるようにします。</p><p class="note">※現在は案内ページ内に留まります。</p></div><a class="ticket-button" href="#ticket">チケットを購入する ↗</a></section>
 </main>
-<footer class="footer"><span>KODOASO / VOTRE INC.</span><a href="../../homepage-preview.html">BACK TO TOP ↑</a></footer>
+<footer class="footer"><span>KODOASO / VOTRE INC.</span><span>SLIPPER PHOTO: <a href="https://commons.wikimedia.org/wiki/File:Nigerian_Local_Games_Slippipi.jpg" target="_blank" rel="noopener noreferrer">CHUKWUEMEKA OKAFOR</a> / <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener noreferrer">CC BY-SA 4.0</a> (CROPPED)</span><a href="../../homepage-preview.html">BACK TO TOP ↑</a></footer>
 </body>
 </html>
