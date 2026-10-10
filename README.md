@@ -9,9 +9,14 @@ Macへ引き継ぐ場合は、最初に `Mac引き継ぎ.md` を読んでくだ�
 
 現在のGitHubリポジトリ：<https://github.com/BossGane/GhubGroup>
 
+2026-10-10の引き継ぎ最新版は **`codex/mac-handoff-20261010`** ブランチです。画像差し替えとこども選挙の追加を含みます。Macでもこのブランチを選んでください。
+
 ```bash
 cd ~/Documents/CODEX/projects/GhubGroup
-git pull --ff-only origin main
+git status
+git fetch origin
+git switch codex/mac-handoff-20261010
+git pull --ff-only
 python3 -m http.server 8787 --bind 127.0.0.1
 ```
 

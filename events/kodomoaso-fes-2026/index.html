@@ -47,33 +47,30 @@ a{color:inherit;text-decoration:none}
 .program-intro{margin-top:90px}
 .program-intro .section-head{margin-bottom:36px}
 .program-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
-.program-item{display:flex;flex-direction:column;min-width:0;padding:20px;border:0;border-radius:6px;color:var(--ink);text-decoration:none;line-height:1.5;overflow:hidden}
-.program-item.program-item-poster{position:relative;padding:0;background:transparent;border-radius:6px}
-.program-item-poster .program-image-wrap{position:absolute;inset:0;order:1;width:100%;height:100%;aspect-ratio:auto;margin:0;clip-path:none}
-.program-item-poster .program-image{object-fit:cover;object-position:center}
+.program-item{display:grid;grid-template-rows:136px 120px 1fr;gap:16px;min-width:0;padding:20px;border:0;border-radius:4px;color:var(--ink);text-decoration:none;line-height:1.5;overflow:hidden}
+.program-item:focus-visible{outline:3px solid var(--ink);outline-offset:4px}
 .svg-sprite{position:absolute;width:0;height:0;overflow:hidden}
-.program-item:nth-child(1){background:#ffd400}
-.program-item:nth-child(2){background:#18a9c7}
-.program-item:nth-child(3){background:#ff6b67}
-.program-item:nth-child(4){background:#91a9ff}
-.program-item:nth-child(5){background:#66d2ad}
-.program-item:nth-child(6){background:#ffab22}
-.program-item:nth-child(7){background:#f2a4dc}
-.program-item:nth-child(8){background:#72a7ff}
-.program-item:nth-child(9){background:#cce84a}
-.program-item:nth-child(10){background:#c3a7f1}
-.program-item:nth-child(11){background:#ff7f4f}
-.program-item:nth-child(12){background:#ffe253}
-.program-item:nth-child(13){background:#40c9a2}
-.program-item:nth-child(14){background:#ffcf56}
-.program-image-wrap{order:2;width:84%;aspect-ratio:16 / 10;overflow:hidden;background:transparent;margin:2px auto 18px;clip-path:polygon(7% 0,100% 0,100% 88%,83% 100%,0 100%,0 10%)}
+.program-item:nth-child(8n+1){background:#fff21a}
+.program-item:nth-child(8n+2){background:#00b72b}
+.program-item:nth-child(8n+3){background:#ff383c}
+.program-item:nth-child(8n+4){background:#57e9b1}
+.program-item:nth-child(8n+5){background:#ff3bca}
+.program-item:nth-child(8n+6){background:#ffc51c}
+.program-item:nth-child(8n+7){background:#39cef4}
+.program-item:nth-child(8n+8){background:#bba3f8}
+.program-image-wrap{order:2;width:84%;height:100%;overflow:hidden;background:transparent;margin:0 auto;clip-path:polygon(7% 0,100% 0,100% 88%,83% 100%,0 100%,0 10%)}
 .program-item:nth-child(3n+2) .program-image-wrap{clip-path:polygon(0 8%,86% 0,100% 20%,96% 100%,10% 94%)}
 .program-item:nth-child(3n) .program-image-wrap{clip-path:polygon(8% 0,100% 10%,92% 92%,65% 100%,0 87%,4% 18%)}
 .program-image{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
 .program-item:hover .program-image{transform:scale(1.025)}
-.program-heading{order:1;display:flex;gap:14px;align-items:baseline;margin-bottom:14px}
-.program-item strong{font-size:clamp(22px,2vw,30px)}
-.program-item small{order:3;display:block;font-size:14px;font-weight:600;line-height:1.7;color:var(--ink)}
+.program-heading{order:1;align-self:start;margin:0}
+.program-heading strong{display:block;font-size:26px;font-weight:900;line-height:1.2;letter-spacing:0;overflow-wrap:anywhere}
+.program-item:nth-child(4n+1) .program-heading strong{font-size:24px}
+.program-item:nth-child(4n+2) .program-heading strong{font-size:30px}
+.program-item:nth-child(4n+3) .program-heading strong{font-size:34px}
+.program-item:nth-child(4n+4) .program-heading strong{font-size:28px}
+.program-item small{order:3;display:block;font-size:14px;font-weight:600;line-height:1.8;color:var(--ink)}
+.program-subtitle{display:block;font-size:14px;font-weight:800;margin-bottom:10px}
 .schedule{border-top:1px solid var(--ink)}
 .schedule-row{display:grid;grid-template-columns:190px 1fr;gap:24px;padding:20px 0;border-bottom:1px solid #aebec5;align-items:start}
 .schedule-row time{font-size:clamp(20px,2.2vw,30px);font-weight:700}
@@ -140,6 +137,15 @@ a{color:inherit;text-decoration:none}
 .santa-copy{font-size:17px;line-height:1.9;margin:0;max-width:600px}
 .santa-gallery{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .santa-gallery img{display:block;width:100%;aspect-ratio:4 / 3;object-fit:cover}
+.election-section{background:#fff21a}
+.election-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:56px;align-items:start}
+.election-copy p{font-size:17px;line-height:1.9;margin:0 0 24px}
+.election-copy .election-lead{font-size:32px;font-weight:800;line-height:1.5;letter-spacing:0;margin:0 0 28px}
+.election-image{display:block;width:100%;height:auto}
+.election-question{border-top:1px solid var(--ink);padding-top:24px}
+.election-credit{border-top:1px solid var(--ink);padding-top:24px}
+.election-detail-link{display:inline-block;font-weight:800;border-bottom:1px solid var(--ink);padding-bottom:6px;margin-top:10px}
+.election-detail-link:focus-visible{outline:3px solid var(--ink);outline-offset:5px}
 .access-copy{max-width:760px;margin-bottom:38px}
 .map-wrap{border:1px solid var(--line);background:#dfe9ec}
 .map-wrap iframe{display:block;width:100%;height:430px;border:0}
@@ -154,6 +160,9 @@ a{color:inherit;text-decoration:none}
 .ticket-button:hover{background:#fff;color:var(--ink)}
 .note{font-size:12px;color:#bbb!important}
 .footer{display:flex;justify-content:space-between;padding:28px 5vw;font-size:11px;letter-spacing:.1em}
+@media(min-width:701px) and (max-width:1000px){
+.program-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
 @media(max-width:700px){.nav{gap:12px;font-size:10px}
 .hero{min-height:auto;grid-template-columns:1fr;padding:68px 7vw;gap:42px}
 .hero h1{font-size:clamp(48px,15vw,82px)}
@@ -167,11 +176,16 @@ a{color:inherit;text-decoration:none}
 .mobile-break{display:block}
 .grid,.facts,.about-layout,.music-grid,.bubble-layout,.contest-callout,.prize-grid,.bmx-layout,.maze-options,.santa-layout{grid-template-columns:1fr}
 .program-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.program-item{padding:12px}
-.program-image-wrap{width:88%;aspect-ratio:4 / 3;margin:2px auto 14px}
-.program-heading{display:block;margin-bottom:6px}
-.program-item strong{display:block;font-size:17px;line-height:1.35}
-.program-item small{font-size:11px;line-height:1.55}
+.program-item{padding:12px;grid-template-rows:112px 96px 1fr;gap:12px}
+.program-image-wrap{width:88%;margin:0 auto}
+.program-heading{display:block;margin:0}
+.program-heading strong{font-size:19px;line-height:1.25}
+.program-item:nth-child(4n+1) .program-heading strong{font-size:18px}
+.program-item:nth-child(4n+2) .program-heading strong{font-size:21px}
+.program-item:nth-child(4n+3) .program-heading strong{font-size:24px}
+.program-item:nth-child(4n+4) .program-heading strong{font-size:20px}
+.program-item small{font-size:12px;line-height:1.75}
+.program-subtitle{font-size:12px;margin-bottom:8px}
 .music-gallery{grid-template-columns:1fr 1fr;gap:8px;margin:28px 0}
 .music-gallery img:last-child{grid-column:1 / -1;aspect-ratio:16 / 9}
 .program-intro .section-head,#timetable.section-head{flex-direction:column;gap:12px}
@@ -180,6 +194,10 @@ a{color:inherit;text-decoration:none}
 .tile{min-height:0}
 .maze-option{min-height:300px;padding:42px 7vw}
 .santa-gallery{gap:8px}
+.election-layout{grid-template-columns:1fr;gap:28px}
+.election-section .section-head{flex-direction:column;gap:12px}
+.election-copy .election-lead{font-size:24px}
+.election-copy p{font-size:16px}
 .fact{border-right:0;border-bottom:1px solid var(--ink)}
 .fact:last-child{border-bottom:0}
 .schedule-row{grid-template-columns:1fr;gap:8px}
@@ -209,35 +227,46 @@ a{color:inherit;text-decoration:none}
 <section class="section program-section" id="program">
 <div class="section-head"><h2>PROGRAM</h2><span class="label">PLAY / MARKET / STAGE</span></div>
 <div class="grid"><article class="tile"><span class="label">01 / PLAY</span><b>あそぶ</b><p>親子で楽しめる遊びと体験。思いきり動いて、やってみたいをひらきます。</p></article><article class="tile"><span class="label">02 / MARKET</span><b>であう</b><p>暮らしを彩る出店やフード。地域の人と、新しいお気に入りに出会えます。</p></article><article class="tile"><span class="label">03 / STAGE</span><b>ひろがる</b><p>音楽やパフォーマンスが、会場をひとつに。心に残る景色を届けます。</p></article></div>
-<div class="program-intro"><div class="section-head"><h2 class="japanese-heading">遊びの紹介</h2><span class="label">EVENT CONTENTS</span></div><div class="program-list">
-<a class="program-item program-item-poster" href="#bubble-works" aria-label="バブルワークスと遊ぼう"><div class="program-image-wrap"><img class="program-image" src="program-assets/bubble-works-poster.jpg" alt="バブルワークスのシャボン玉ショーと遊び場"></div></a>
-<a class="program-item" href="#music"><div class="program-image-wrap"><img class="program-image" src="program-assets/iwamoto-03.jpg" alt="音楽家の岩本象一さん"></div><div class="program-heading"><strong>音楽家と遊ぼう！</strong></div><small>音楽をただ「聴く」だけではなく、一緒に音を鳴らして、感じて“音で遊ぶ”体験を。</small></a>
-<a class="program-item" href="#bmx"><div class="program-image-wrap"><img class="program-image" src="program-assets/bmx-01.jpg" alt="子供たちがBMXを体験する様子"></div><div class="program-heading"><strong>BMX</strong></div><small>講師と一緒に走って、曲がって、自転車を操る楽しさに親子で挑戦します。</small></a>
-<a class="program-item" href="#cardboard-maze"><div class="program-image-wrap"><img class="program-image" src="program-assets/cardboard-maze-01.jpg" alt="巨大段ボール迷路"></div><div class="program-heading"><strong>段ボール迷路</strong></div><small>巨大迷路と暗闇探検。ドキドキしながら道を探して、ゴールを目指そう。</small></a>
-<a class="program-item" href="#slipper-contest"><div class="program-image-wrap"><svg class="program-image" viewBox="0 0 160 160" role="img" aria-label="足からスリッパが飛び出すピクトグラム"><use href="#slipper-contest-icon"/></svg></div><div class="program-heading"><strong>スリッパ飛ばし大会</strong></div><small>大人も子供も思いきりスリッパを飛ばして、豪華景品をつかみ取ろう。</small></a>
-<a class="program-item" href="#santa-arrives"><div class="program-image-wrap"><img class="program-image" src="program-assets/santa-01.jpg" alt="サンタクロースの写真"></div><div class="program-heading"><strong>サンタ</strong></div><small>こどあそにサンタクロースが登場。家族の冬の思い出をつくる特別な時間です。</small></a>
+<div class="program-intro" id="play-introduction"><div class="section-head"><h2 class="japanese-heading">遊びの紹介</h2><span class="label">EVENT CONTENTS</span></div><div class="program-list">
+<a class="program-item" href="#bubble-works"><div class="program-image-wrap"><img class="program-image" src="program-assets/bubble-daytime.png" alt="青空の下でシャボン玉を楽しむ子供たち"></div><div class="program-heading"><strong>バブルワークスさんと遊ぼう！</strong></div><small><b class="program-subtitle">シャボン玉ショー&amp;遊び場</b>ナイトバブルで夜空を彩ったバブルワークスが、今度はお昼のこどあそフェスにやってくる！<br>ギネス世界記録公式認定を持つプロと一緒に遊ぼう！</small></a>
+<a class="program-item" href="#music"><div class="program-image-wrap"><img class="program-image" src="program-assets/iwamoto-03.jpg" alt="音楽家の岩本象一さん"></div><div class="program-heading"><strong>音楽家と音で遊ぼう！</strong></div><small>音楽をただ「聴く」だけではなく、一緒に音を鳴らして、感じて“音で遊ぶ”体験を</small></a>
+<a class="program-item" href="#bmx"><div class="program-image-wrap"><img class="program-image" src="program-assets/bmx-01.jpg" alt="子供たちがBMXを体験する様子"></div><div class="program-heading"><strong>BMXに挑戦しよう！</strong></div><small>元全日本チャンピオンの先生とBMXの楽しさを体験しよう♫<br>初めてでも大歓迎！</small></a>
+<a class="program-item" href="#cardboard-maze"><div class="program-image-wrap"><img class="program-image" src="program-assets/cardboard-dark-exploration.png" alt="屋外の段ボール迷路に挑戦する子供たち"></div><div class="program-heading"><strong>ダンボール迷路</strong></div><small>ARTチームがつくる大きな迷路を攻略しよう！考える力と冒険心を刺激しゴールへ♫</small></a>
+<a class="program-item" href="#slipper-contest"><div class="program-image-wrap"><img class="program-image" src="program-assets/slipper-play.png" alt="青空へ履物を飛ばして遊ぶ子供たち"></div><div class="program-heading"><strong>スリッパ飛ばし大会！</strong></div><small>大人も子どもも真剣勝負！<br>思いっきり飛ばして景品を狙おう。挑戦って楽しい！</small></a>
+<a class="program-item" href="#santa-arrives"><div class="program-image-wrap"><img class="program-image" src="program-assets/santa-01.jpg" alt="サンタクロースの写真"></div><div class="program-heading"><strong>サンタさんと記念撮影！</strong></div><small>遠い北の国からやってくるサンタさんに会える特別な日！<br>ひと足早いクリスマスを♫</small></a>
 <!-- Provisional photo: https://www.pexels.com/photo/food-trucks-on-a-grass-field-16077805/ -->
 <a class="program-item" href="#program"><div class="program-image-wrap"><img class="program-image" src="program-assets/food-truck-pexels.jpg" alt="芝生広場に並ぶキッチンカー"></div><div class="program-heading"><strong>キッチンカー</strong></div><small>家族で味わいたいフードやドリンクが集合。お気に入りの一品を見つけよう。</small></a>
 <a class="program-item" href="#program"><div class="program-image-wrap"><img class="program-image" src="../../service/event-assets/work/kodomoaso-fes.jpg" alt="体験ワークショップの仮画像"></div><div class="program-heading"><strong>体験ワークショップ</strong></div><small>つくる、試す、夢中になる。子供の好奇心をひらく体験がそろいます。</small></a>
 <!-- Provisional photo: https://www.pexels.com/photo/a-kid-planting-seeds-on-the-ground-soil-7782192/ -->
-<a class="program-item" href="#program"><div class="program-image-wrap"><img class="program-image" src="program-assets/farming-pexels.jpg" alt="子供が土に種を植える農業体験"></div><div class="program-heading"><strong>農業体験</strong></div><small>土や作物にふれながら、育てることや農業の面白さを親子で体験します。</small></a>
-<a class="program-item" href="#program"><div class="program-image-wrap"><img class="program-image" src="program-assets/election-01.jpg" alt="こども選挙の結果発表"></div><div class="program-heading"><strong>こども選挙</strong></div><small>自分で考えて一票を選ぶ、子供たちのための小さな選挙体験です。</small></a>
-<!-- Provisional photo: https://www.pexels.com/photo/children-painting-in-the-art-class-8382373/ -->
-<a class="program-item" href="#program"><div class="program-image-wrap"><img class="program-image" src="program-assets/painting-pexels.jpg" alt="絵画教室で自由に絵を描く子供たち"></div><div class="program-heading"><strong>お絵かきで遊ぼう</strong></div><small>上手や正解にとらわれず、自由な発想で思いきり絵を描いて遊びます。</small></a>
+<a class="program-item" href="#program"><div class="program-image-wrap"><img class="program-image" src="program-assets/farming-pexels.jpg" alt="子供が土に種を植える農業体験"></div><div class="program-heading"><strong>農家さんと農業体験</strong></div><small>土や作物にふれて、育てることや農業の面白さを親子で体験してみよう！</small></a>
+<a class="program-item" href="#kodomo-election"><div class="program-image-wrap"><img class="program-image" src="program-assets/election-characters.jpg" alt="ポンカースフィニアのモンスターたち"></div><div class="program-heading"><strong>こども選挙</strong></div><small>子供たちの小さな選挙体験。<br>自分で決める、という学び。<br>自分の気持ちを届ける体験。</small></a>
+<a class="program-item" href="#program"><div class="program-image-wrap"><img class="program-image" src="program-assets/crayon-drawing.jpg" alt="クレヨンで自由に絵を描く子供の手"></div><div class="program-heading"><strong>お絵描きで遊ぼう！</strong></div><small>正解のない自由なお絵描き！<br>安心な素材のクレヨンで小さな子も楽しく遊ぼう♫</small></a>
 <!-- Provisional photo: https://www.pexels.com/photo/children-reading-books-8466915/ -->
-<a class="program-item" href="#program"><div class="program-image-wrap"><img class="program-image" src="program-assets/reading-pexels.jpg" alt="絵本を読む子供たち"></div><div class="program-heading"><strong>えほん専門士と遊ぼう</strong></div><small>えほん専門士と一緒に、物語の世界を見て、聞いて、親子で楽しみます。</small></a>
-<!-- Provisional photo: https://www.pexels.com/photo/joyful-children-playing-indoors-with-bamboo-35105829/ -->
-<a class="program-item" href="#program"><div class="program-image-wrap"><img class="program-image" src="program-assets/bamboo-pexels.jpg" alt="竹のおもちゃで遊ぶ子供たち"></div><div class="program-heading"><strong>竹で遊ぼう</strong></div><small>自然素材の竹にふれ、工夫しながら昔ながらの遊びやものづくりに挑戦します。</small></a>
+<a class="program-item" href="#program"><div class="program-image-wrap"><img class="program-image" src="program-assets/reading-pexels.jpg" alt="絵本を読む子供たち"></div><div class="program-heading"><strong>絵本の世界を楽しもう！</strong></div><small>絵本専門士の読み聞かせと自由に楽しめる絵本コーナー！<br>新しい絵本の魅力を発見♫</small></a>
+<a class="program-item" href="#program"><div class="program-image-wrap"><img class="program-image" src="program-assets/bamboo-play.jpg" alt="竹を組み合わせた遊び場で楽しむ子供たち"></div><div class="program-heading"><strong>バンブーと遊ぼう</strong></div><small>自然素材の竹に触れて遊び方から自由に考える！<br>子供の発想が遊びになる♫</small></a>
 <!-- Provisional photo: https://www.pexels.com/photo/a-boy-and-a-girl-looking-at-a-map-8083371/ -->
 <a class="program-item" href="#program"><div class="program-image-wrap"><img class="program-image" src="program-assets/stamp-adventure-pexels.jpg" alt="地図を手に冒険する子供たち"></div><div class="program-heading"><strong>スタンプを探して冒険しよう！</strong></div><small>会場を巡って隠れたスタンプを集める、家族みんなの小さな冒険です。</small></a>
 </div></div>
 <div class="section-head" id="timetable" style="margin-top:90px"><h2 class="japanese-heading">タイムテーブル</h2><span class="label">随時更新</span></div><div class="schedule"><div class="schedule-row"><time>10:00</time><div><strong>イベントスタート</strong><p>開場とともに遊びのプログラムが始まります。</p></div></div><div class="schedule-row"><time>10:30〜11:00</time><div><strong>バブルワークス シャボン玉ショー</strong></div></div><div class="schedule-row"><time>11:00</time><div><strong>岩本さん 音楽演奏</strong></div></div><div class="schedule-row"><time>11:30〜12:30</time><div><strong>シャボン玉の遊び場</strong></div></div><div class="schedule-row"><time>12:30〜13:00</time><div><strong>スリッパ飛ばし大会</strong></div></div><div class="schedule-row"><time>13:00〜13:30</time><div><strong>バブルワークス シャボン玉ショー</strong></div></div><div class="schedule-row"><time>14:00</time><div><strong>岩本さん 音楽演奏</strong></div></div><div class="schedule-row" id="santa-program"><time>14:30〜15:30</time><div><strong>サンタクロース</strong><p>時間内に2回登場予定です。</p></div></div><div class="schedule-row"><time>15:30</time><div><strong>イベント終了</strong></div></div></div>
 </section>
-<section class="section bubble-section" id="bubble-works"><div class="section-head"><h2>BUBBLE WORKS</h2><span class="label">SHOW / PLAYGROUND</span></div><img class="bubble-photo" src="../../service/event-assets/work/todagawa-night-bubble.jpg" alt="バブルワークスのシャボン玉ショー"><div class="bubble-layout"><div><p class="feature-lead">午前と午後のシャボン玉ショーと、自由に楽しめる遊び場。家族みんなでシャボン玉の景色を楽しめるプログラムです。</p></div><div class="bubble-schedule"><article class="bubble-slot"><time>10:30〜11:00</time><div><h3>シャボン玉ショー</h3><p>午前の空いっぱいに広がるシャボン玉を楽しもう。</p></div></article><article class="bubble-slot"><time>11:30〜12:30</time><div><h3>シャボン玉の遊び場</h3><p>子供たちが自分で遊べる体験時間です。</p></div></article><article class="bubble-slot"><time>13:00〜13:30</time><div><h3>シャボン玉ショー</h3><p>午後から来場する家族も楽しめる2回目のショー。</p></div></article></div></div></section>
+<section class="section bubble-section" id="bubble-works"><div class="section-head"><h2>BUBBLE WORKS</h2><span class="label">SHOW / PLAYGROUND</span></div><img class="bubble-photo" src="program-assets/bubble-daytime.png" alt="青空の下でシャボン玉を楽しむ子供たち"><div class="bubble-layout"><div><p class="feature-lead">午前と午後のシャボン玉ショーと、自由に楽しめる遊び場。家族みんなでシャボン玉の景色を楽しめるプログラムです。</p></div><div class="bubble-schedule"><article class="bubble-slot"><time>10:30〜11:00</time><div><h3>シャボン玉ショー</h3><p>午前の空いっぱいに広がるシャボン玉を楽しもう。</p></div></article><article class="bubble-slot"><time>11:30〜12:30</time><div><h3>シャボン玉の遊び場</h3><p>子供たちが自分で遊べる体験時間です。</p></div></article><article class="bubble-slot"><time>13:00〜13:30</time><div><h3>シャボン玉ショー</h3><p>午後から来場する家族も楽しめる2回目のショー。</p></div></article></div></div></section>
 <section class="section contest-section" id="slipper-contest"><div class="section-head"><h2>スリッパ飛ばし<span class="mobile-break"></span>大会</h2><div class="contest-mark"><svg class="contest-pictogram" viewBox="0 0 160 160" role="img" aria-label="足からスリッパが飛び出すピクトグラム"><use href="#slipper-contest-icon"/></svg><span class="label">ENTRY CLOSE / 12:00</span></div></div><div class="contest-callout"><div class="contest-copy"><h3>飛ばせ、ねらえ、<br>豪華景品をつかみ取れ。</h3><p>大人の部と子供の部で開催。思いきりスリッパを飛ばして、会場の一番を目指そう。各部門の優勝者には豪華景品をプレゼントします。</p><div class="prize-grid"><div class="prize-item"><small>大人の部 優勝賞品</small><b>ファミリーおでかけギフト<br>10,000円相当</b><span class="provisional">※仮設定・景品は変更予定です</span></div><div class="prize-item"><small>子供の部 優勝賞品</small><b>人気おもちゃ＆<br>お菓子セット</b><span class="provisional">※仮設定・景品は変更予定です</span></div></div></div><aside class="entry-box"><div class="contest-start"><small>START</small><strong>12:30</strong></div><span class="label">ENTRY</span><strong>参加無料</strong><p>当日12:00までに会場でエントリーしてください。</p></aside></div></section>
 <section class="section" id="music"><div class="section-head"><h2>音楽家と遊ぼう！</h2><span class="label">MUSIC PROGRAM</span></div><p class="music-lead">音楽家・岩本象一さんと、音楽をただ「聴く」だけではなく、一緒に音を鳴らして、感じて“音で遊ぶ”体験を。</p><div class="music-gallery"><img src="program-assets/iwamoto-01.jpg" alt="演奏中の音楽家・岩本象一さん"><img src="program-assets/iwamoto-02.jpg" alt="楽器を演奏する岩本象一さん"><img src="program-assets/iwamoto-03.jpg" alt="音の道具を手にする岩本象一さん"></div><div class="music-grid"><article class="music-item"><time>11:00</time><h3>音楽演奏</h3><p>会場で楽しむライブパフォーマンス。</p></article><article class="music-item"><time>12:00</time><h3>音楽ワークショップ</h3><p>約20分。親子で音を鳴らし、音楽を楽しみます。</p></article><article class="music-item"><time>14:00</time><h3>音楽演奏</h3><p>午後のライブパフォーマンス。</p></article></div></section>
 <section class="section bmx-section" id="bmx"><div class="section-head"><h2>BMX</h2><span class="label">RIDE / CHALLENGE</span></div><img class="bmx-photo" src="program-assets/bmx-02.jpg" alt="サムライドBMXの講師による実演"><div class="bmx-layout"><div><p class="bmx-lead">サムライドBMX</p><p class="bmx-copy">はじめてでも楽しめるBMX体験。講師と一緒に、自転車を操る面白さと新しい動きに挑戦します。</p></div><div class="bmx-links"><a class="bmx-link" href="https://www.instagram.com/samuride_bmxclub/" target="_blank" rel="noopener noreferrer"><span>サムライドBMX</span><span>Instagram ↗</span></a><a class="bmx-link" href="https://www.instagram.com/daichiteshigram/" target="_blank" rel="noopener noreferrer"><span>講師</span><span>Instagram ↗</span></a></div></div></section>
-<section class="section maze-section" id="cardboard-maze"><div class="section-head"><h2>段ボール迷路</h2><span class="label">MAZE ADVENTURE</span></div><div class="maze-options"><article class="maze-option"><div><span class="label">01 / GIANT MAZE</span><h3>巨大段ボール迷路</h3><p>家族で道を探しながら、段ボールでできた大きな迷路のゴールを目指そう。</p></div><img class="maze-photo" src="program-assets/cardboard-maze-01.jpg" alt="体育館いっぱいに広がる巨大段ボール迷路"><svg class="maze-symbol" viewBox="0 0 80 80" role="img" aria-label="迷路のアイコン"><path d="M12 68V12h56v56H28V28h24v24H40V40"/></svg></article><article class="maze-option"><div><span class="label">02 / DARK EXPLORATION</span><h3>暗闇探検</h3><p>光の少ない迷路を手探りで進む、少しドキドキする探検コースです。</p></div><img class="maze-photo" src="program-assets/cardboard-maze-02.jpg" alt="子供たちが挑戦する段ボール迷路"><svg class="maze-symbol" viewBox="0 0 80 80" role="img" aria-label="暗闇探検のアイコン"><circle cx="34" cy="40" r="13"/><path d="M47 32l20-12M49 40h22M47 48l20 12M15 60l10-10"/></svg></article></div></section>
+<section class="section maze-section" id="cardboard-maze"><div class="section-head"><h2>段ボール迷路</h2><span class="label">MAZE ADVENTURE</span></div><div class="maze-options"><article class="maze-option"><div><span class="label">01 / GIANT MAZE</span><h3>巨大段ボール迷路</h3><p>家族で道を探しながら、段ボールでできた大きな迷路のゴールを目指そう。</p></div><img class="maze-photo" src="program-assets/cardboard-maze-01.jpg" alt="体育館いっぱいに広がる巨大段ボール迷路"><svg class="maze-symbol" viewBox="0 0 80 80" role="img" aria-label="迷路のアイコン"><path d="M12 68V12h56v56H28V28h24v24H40V40"/></svg></article><article class="maze-option"><div><span class="label">02 / DARK EXPLORATION</span><h3>暗闇探検</h3><p>光の少ない迷路を手探りで進む、少しドキドキする探検コースです。</p></div><img class="maze-photo" src="program-assets/cardboard-dark-exploration.png" alt="段ボールのトンネルへ入って探検する子供"><svg class="maze-symbol" viewBox="0 0 80 80" role="img" aria-label="暗闇探検のアイコン"><circle cx="34" cy="40" r="13"/><path d="M47 32l20-12M49 40h22M47 48l20 12M15 60l10-10"/></svg></article></div></section>
+<section class="section election-section" id="kodomo-election">
+<div class="section-head"><h2>こども選挙</h2><span class="label">CHOOSE / EXPERIENCE</span></div>
+<div class="election-layout"><div class="election-copy">
+<p class="election-lead">勝ち負けではなく、<br>「自分で選ぶ」という体験。</p>
+<p>投票して、結果にちょっとドキドキする。<br>そんな体験を、子どもたちに届けたい。</p>
+<p>選挙を特別なものではなく、<br>「えらぶって、たのしい。」<br>そんな感覚からはじめられたら嬉しいです。</p>
+<p class="election-question">ぜひ、お子さまに<br>「どうしてそれを選んだの？」と聞いてみてください。<br>その理由を一生懸命に伝える時間も、きっと大切な学びです。</p>
+<div class="election-credit"><p>今回のこども選挙は<br>出店者【ひよこまめ】さんに<br>ご協力いただいています。<br><a href="https://www.instagram.com/hiyokomame119/" target="_blank" rel="noopener noreferrer">@hiyokomame119 ↗</a></p>
+<p>小学5年生の作家さんが描く<br>「ポンカースフィニア」のモンスターたち。</p>
+<p>1年生の頃から続く世界観に、<br>こどもたちの一票を。</p></div>
+<a class="election-detail-link" href="kodomo-election.html">こども選挙の詳細へ ↗</a>
+</div><img class="election-image" src="program-assets/election-characters.jpg" alt="ポンカースフィニアの色とりどりのモンスターたち"></div>
+</section>
 <section class="section santa-section" id="santa-arrives"><div class="section-head"><h2>サンタがやって来る。</h2><span class="label">CHRISTMAS SPECIAL</span></div><div class="santa-layout"><div><p class="santa-lead">こどあそで出会う、<br>特別なサンタクロース。</p><p class="santa-copy">会場にサンタクロースが登場します。家族で写真を撮ったり、クリスマスの空気を一緒に楽しんだり。冬の一日を彩る特別な時間です。</p></div><div class="santa-gallery"><img src="program-assets/santa-01.jpg" alt="プレゼントに囲まれたサンタクロース"><img src="program-assets/santa-02.jpg" alt="明かりに包まれたサンタクロース"></div></div></section>
 <section class="section access" id="access"><div class="section-head"><h2>ACCESS</h2><span class="label">戸田川緑地</span></div><p class="hero-copy access-copy">会場は名古屋市の戸田川緑地です。第一駐車場の北側の芝生広場です。下の地図から位置をご確認ください。</p><div class="map-wrap"><iframe title="戸田川緑地 MAP" src="https://www.google.com/maps?q=%E6%88%B8%E7%94%B0%E5%B7%9D%E7%B7%91%E5%9C%B0&output=embed" loading="lazy"></iframe></div><div class="parking"><h3>駐車場無料</h3><p>戸田川緑地の第1〜第5駐車場を無料でご利用いただけます。当日は混雑が予想されるため、時間に余裕をもってお越しください。</p><img class="parking-map" src="access-parkmap-2026.png" alt="戸田川緑地 第1〜第5駐車場の位置図"></div></section>
 <section class="section ticket" id="ticket"><div><h2>TICKET</h2><p>チケット販売サイトは準備中です。公開後、このボタンから購入ページへ移動できるようにします。</p><p class="note">※現在は案内ページ内に留まります。</p></div><a class="ticket-button" href="#ticket">チケットを購入する ↗</a></section>

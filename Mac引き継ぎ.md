@@ -1,8 +1,19 @@
 # VOTRE-KODOASO Mac引き継ぎ手順
 
-更新：2026-10-06
+更新：2026-10-10
 
 この文書は、Windowsで進めたKODOASOサイト制作をMacへ引き継ぎ、同じGitHubリポジトリを使って作業を続けるための手順です。
+
+## 今回の引き継ぎ先
+
+- リポジトリ：<https://github.com/BossGane/GhubGroup>
+- 作業ブランチ：`codex/mac-handoff-20261010`
+- 公開用ブランチ：`main`
+- 今回の最新版は作業ブランチにあります。Macで `main` だけを開くと、今回の未公開修正は表示されません。
+
+このブランチには、遊びの説明文・鮮やかな配色・見出しサイズの変更、5枚の新しい画像、サンタの直前に追加したこども選挙欄、こども選挙の詳細ページが入っています。
+
+画像はすべてリポジトリ内に保存済みです。WindowsのIドライブや元画像フォルダをMacへ別途コピーする必要はありません。Codexのチャット履歴がなくても、コードとこの手順書から作業を再開できます。
 
 ## 基本ルール
 
@@ -10,9 +21,9 @@
 - リポジトリ：<https://github.com/BossGane/GhubGroup>
 - 公開サイト：<https://bossgane.github.io/GhubGroup/>
 - WindowsとMacで同時に編集しません。
-- 作業を始める前にGitHubから最新版を取得し、作業終了時にGitHubへ保存します。
+- 作業を始める前に同じ作業ブランチの最新版を取得し、端末を切り替える前にそのブランチへCommit・Pushします。
 - `I:\` から始まるWindowsのパスはMacでは使えません。サイトで使う画像は、必ずリポジトリ内へ保存してから公開します。
-- GitHubへ保存しただけではWordPressやConoHaには反映されません。GitHub Pagesの静的ページだけが更新されます。
+- 引き継ぎブランチへのPushは作業の保存です。GitHub Pagesへの公開は、公開指示後に `main` へ反映して行います。WordPressやConoHaへの反映は別作業です。
 
 ## Macで最初に一度だけ行う準備
 
@@ -46,6 +57,30 @@ https://github.com/BossGane/GhubGroup.git
 
 すでに同じリポジトリをMacへCloneしている場合は、再度Cloneしません。既存フォルダをGitHub Desktopで開き、`Fetch origin`を実行します。
 
+CloneまたはFetchが終わったら、`Current Branch` から **`codex/mac-handoff-20261010`** を選びます。更新がある場合は `Pull origin` を実行してください。Changes欄に既存の変更がある場合は、その変更を保存してからブランチを切り替えます。
+
+### ターミナルから取得する場合
+
+初めて取得する場合：
+
+```bash
+mkdir -p ~/Documents/CODEX/projects
+cd ~/Documents/CODEX/projects
+git clone --branch codex/mac-handoff-20261010 https://github.com/BossGane/GhubGroup.git GhubGroup
+```
+
+すでにClone済みで、未コミット変更がない場合：
+
+```bash
+cd ~/Documents/CODEX/projects/GhubGroup
+git status
+git fetch origin
+git switch codex/mac-handoff-20261010
+git pull --ff-only
+```
+
+ブランチがないと言われた場合は `git switch --track origin/codex/mac-handoff-20261010` を使います。
+
 ### 3. Codexでフォルダを開く
 
 Codexで次のフォルダをプロジェクトとして開きます。
@@ -59,8 +94,11 @@ Codexで次のフォルダをプロジェクトとして開きます。
 ```text
 このKODOASOサイトをMacで引き継ぎます。
 最初にAGENTS.md、README.md、Mac引き継ぎ.mdを読んでください。
-次にgit statusと現在のブランチを確認し、未コミットの変更があれば勝手に消さずに報告してください。
-作業はまずローカルで進め、私が指示するまでGitHubへ公開しないでください。
+git statusと現在のブランチを確認してください。
+使用するブランチはcodex/mac-handoff-20261010です。
+未コミットの変更があれば勝手に消さずに報告してください。
+ローカルサーバーを8787番で起動し、こどあそフェスを表示してください。
+作業はローカルで進めてください。端末の引き継ぎでは同じ作業ブランチへ保存し、公開の指示があるまでmainへ反映しないでください。
 ```
 
 ## ローカルサイトを表示する
@@ -76,6 +114,18 @@ python3 -m http.server 8787 --bind 127.0.0.1
 
 <http://127.0.0.1:8787/events/kodomoaso-fes-2026/>
 
+遊びの紹介：
+
+<http://127.0.0.1:8787/events/kodomoaso-fes-2026/index.html#play-introduction>
+
+サンタの前のこども選挙欄：
+
+<http://127.0.0.1:8787/events/kodomoaso-fes-2026/index.html#kodomo-election>
+
+こども選挙の詳細ページ：
+
+<http://127.0.0.1:8787/events/kodomoaso-fes-2026/kodomo-election.html>
+
 トップページ：
 
 <http://127.0.0.1:8787/homepage-preview.html>
@@ -84,9 +134,9 @@ python3 -m http.server 8787 --bind 127.0.0.1
 
 ## Macで毎回作業を始める手順
 
-1. Windows側の作業が終了し、GitHubへ公開済みであることを確認します。
+1. Windows側の作業が終了し、作業ブランチへPush済みであることを確認します。
 2. GitHub Desktopで対象リポジトリを開きます。
-3. `Fetch origin`を押し、更新があれば`Pull origin`を押します。
+3. `codex/mac-handoff-20261010` を選び、`Fetch origin`を押し、更新があれば`Pull origin`を押します。
 4. Codexでリポジトリを開きます。
 5. `git status`で未保存の変更がないか確認します。
 6. ローカルサーバーを起動し、ブラウザで表示を確認します。
@@ -96,23 +146,45 @@ python3 -m http.server 8787 --bind 127.0.0.1
 ```bash
 cd ~/Documents/CODEX/projects/GhubGroup
 git status
-git pull --ff-only origin main
+git switch codex/mac-handoff-20261010
+git pull --ff-only
 python3 -m http.server 8787 --bind 127.0.0.1
 ```
 
 `git status`で変更が表示された場合は、先にCodexへ内容を確認させてください。未コミット変更がある状態で安易にPullや削除をしません。
 
-## 作業終了とGitHub公開
+## 作業終了とWindowsへ戻る手順
+
+Macでの作業を終了してWindowsへ戻すときは、Codexへ次のように依頼します。
+
+```text
+変更を確認し、codex/mac-handoff-20261010ブランチへコミットしてPushしてください。
+これはWindowsへの引き継ぎ用です。mainへの反映と公開は行わないでください。
+```
+
+GitHub Desktopでは、ChangesからCommitし、`Push origin` を押すと同じ作業ブランチへ保存できます。保存後は `No local changes` と表示され、未Pushのコミットがないことを確認します。
+
+Windowsへ戻ったら、同じブランチを選んでFetch・Pullしてください。Windowsの作業場所は `I:\CODEX\projects\VOTRE-KODOASO` です。
+
+```powershell
+Set-Location I:\CODEX\projects\VOTRE-KODOASO
+git status
+git fetch origin
+git switch codex/mac-handoff-20261010
+git pull --ff-only
+```
+
+## GitHub Pagesへ公開する場合
 
 作業中はローカルだけで確認します。クライアント確認や公開のタイミングで、Codexへ次のように依頼します。
 
 ```text
 現在の変更を確認し、表示テストを行ってください。
-問題がなければ変更内容が分かるコミットを作成し、mainへpushしてください。
+問題がなければ作業ブランチの変更をコミットし、最新のmainと照合してmainへ取り込んでPushしてください。
 その後、GitHub Pagesの公開ページへ反映されたことも確認してください。
 ```
 
-公開後はGitHub Desktopで`No local changes`になっていることを確認します。MacからWindowsへ戻るときも、Mac側の変更を先にGitHubへPushしてからWindowsでPullします。
+公開後はGitHub Desktopで`No local changes`になっていることを確認します。公開後に次の作業を始めるブランチは、その時点でCodexと確認します。
 
 ## よくあるトラブル
 
