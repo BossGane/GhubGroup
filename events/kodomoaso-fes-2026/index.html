@@ -47,7 +47,7 @@ a{color:inherit;text-decoration:none}
 .program-intro{margin-top:90px}
 .program-intro .section-head{margin-bottom:36px}
 .program-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
-.program-item{display:grid;grid-template-rows:136px 120px 1fr;gap:16px;min-width:0;padding:20px;border:0;border-radius:4px;color:var(--ink);text-decoration:none;line-height:1.5;overflow:hidden}
+.program-item{display:grid;grid-row:span 3;grid-template-rows:subgrid;gap:14px;min-width:0;padding:18px;border:0;border-radius:4px;color:var(--ink);text-decoration:none;line-height:1.5;overflow:hidden}
 .program-item:focus-visible{outline:3px solid var(--ink);outline-offset:4px}
 .svg-sprite{position:absolute;width:0;height:0;overflow:hidden}
 .program-item:nth-child(8n+1){background:#fff21a}
@@ -58,19 +58,24 @@ a{color:inherit;text-decoration:none}
 .program-item:nth-child(8n+6){background:#ffc51c}
 .program-item:nth-child(8n+7){background:#39cef4}
 .program-item:nth-child(8n+8){background:#bba3f8}
-.program-image-wrap{order:2;width:84%;height:100%;overflow:hidden;background:transparent;margin:0 auto;clip-path:polygon(7% 0,100% 0,100% 88%,83% 100%,0 100%,0 10%)}
+.program-image-wrap{order:2;width:88%;aspect-ratio:4/3;align-self:start;overflow:hidden;background:transparent;margin:0 auto;clip-path:polygon(7% 0,100% 0,100% 88%,83% 100%,0 100%,0 10%)}
 .program-item:nth-child(3n+2) .program-image-wrap{clip-path:polygon(0 8%,86% 0,100% 20%,96% 100%,10% 94%)}
 .program-item:nth-child(3n) .program-image-wrap{clip-path:polygon(8% 0,100% 10%,92% 92%,65% 100%,0 87%,4% 18%)}
 .program-image{display:block;width:100%;height:100%;object-fit:cover;transition:transform .35s ease}
 .program-item:hover .program-image{transform:scale(1.025)}
 .program-heading{order:1;align-self:start;margin:0}
 .program-heading strong{display:block;font-size:26px;font-weight:900;line-height:1.2;letter-spacing:0;overflow-wrap:anywhere}
-.program-item:nth-child(4n+1) .program-heading strong{font-size:24px}
-.program-item:nth-child(4n+2) .program-heading strong{font-size:30px}
-.program-item:nth-child(4n+3) .program-heading strong{font-size:34px}
-.program-item:nth-child(4n+4) .program-heading strong{font-size:28px}
+.program-item:nth-child(4n+1) .program-heading strong{font-size:22px}
+.program-item:nth-child(4n+2) .program-heading strong{font-size:24px}
+.program-item:nth-child(4n+3) .program-heading strong{font-size:26px}
+.program-item:nth-child(4n+4) .program-heading strong{font-size:22px}
 .program-item small{order:3;display:block;font-size:14px;font-weight:600;line-height:1.8;color:var(--ink)}
 .program-subtitle{display:block;font-size:14px;font-weight:800;margin-bottom:10px}
+.program-item.program-featured{grid-column:1/-1;grid-row:span 1;grid-template-columns:minmax(0,.38fr) minmax(0,.62fr);grid-template-rows:auto auto;column-gap:24px;align-items:start}
+.program-featured .program-heading{grid-column:1/-1;grid-row:1}
+.program-item.program-featured .program-heading strong{font-size:30px}
+.program-featured .program-image-wrap{grid-column:1;grid-row:2;width:100%;max-width:320px;margin:0}
+.program-featured small{grid-column:2;grid-row:2;align-self:start}
 .schedule{border-top:1px solid var(--ink)}
 .schedule-row{display:grid;grid-template-columns:190px 1fr;gap:24px;padding:20px 0;border-bottom:1px solid #aebec5;align-items:start}
 .schedule-row time{font-size:clamp(20px,2.2vw,30px);font-weight:700}
@@ -176,16 +181,18 @@ a{color:inherit;text-decoration:none}
 .mobile-break{display:block}
 .grid,.facts,.about-layout,.music-grid,.bubble-layout,.contest-callout,.prize-grid,.bmx-layout,.maze-options,.santa-layout{grid-template-columns:1fr}
 .program-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-.program-item{padding:12px;grid-template-rows:112px 96px 1fr;gap:12px}
+.program-item{padding:12px;gap:10px}
 .program-image-wrap{width:88%;margin:0 auto}
 .program-heading{display:block;margin:0}
 .program-heading strong{font-size:19px;line-height:1.25}
-.program-item:nth-child(4n+1) .program-heading strong{font-size:18px}
-.program-item:nth-child(4n+2) .program-heading strong{font-size:21px}
-.program-item:nth-child(4n+3) .program-heading strong{font-size:24px}
-.program-item:nth-child(4n+4) .program-heading strong{font-size:20px}
+.program-item:nth-child(4n+1) .program-heading strong{font-size:16px}
+.program-item:nth-child(4n+2) .program-heading strong{font-size:17px}
+.program-item:nth-child(4n+3) .program-heading strong{font-size:18px}
+.program-item:nth-child(4n+4) .program-heading strong{font-size:16px}
 .program-item small{font-size:12px;line-height:1.75}
 .program-subtitle{font-size:12px;margin-bottom:8px}
+.program-item.program-featured{column-gap:14px}
+.program-item.program-featured .program-heading strong{font-size:20px}
 .music-gallery{grid-template-columns:1fr 1fr;gap:8px;margin:28px 0}
 .music-gallery img:last-child{grid-column:1 / -1;aspect-ratio:16 / 9}
 .program-intro .section-head,#timetable.section-head{flex-direction:column;gap:12px}
@@ -228,7 +235,7 @@ a{color:inherit;text-decoration:none}
 <div class="section-head"><h2>PROGRAM</h2><span class="label">PLAY / MARKET / STAGE</span></div>
 <div class="grid"><article class="tile"><span class="label">01 / PLAY</span><b>あそぶ</b><p>親子で楽しめる遊びと体験。思いきり動いて、やってみたいをひらきます。</p></article><article class="tile"><span class="label">02 / MARKET</span><b>であう</b><p>暮らしを彩る出店やフード。地域の人と、新しいお気に入りに出会えます。</p></article><article class="tile"><span class="label">03 / STAGE</span><b>ひろがる</b><p>音楽やパフォーマンスが、会場をひとつに。心に残る景色を届けます。</p></article></div>
 <div class="program-intro" id="play-introduction"><div class="section-head"><h2 class="japanese-heading">遊びの紹介</h2><span class="label">EVENT CONTENTS</span></div><div class="program-list">
-<a class="program-item" href="#bubble-works"><div class="program-image-wrap"><img class="program-image" src="program-assets/bubble-daytime.png" alt="青空の下でシャボン玉を楽しむ子供たち"></div><div class="program-heading"><strong>バブルワークスさんと遊ぼう！</strong></div><small><b class="program-subtitle">シャボン玉ショー&amp;遊び場</b>ナイトバブルで夜空を彩ったバブルワークスが、今度はお昼のこどあそフェスにやってくる！<br>ギネス世界記録公式認定を持つプロと一緒に遊ぼう！</small></a>
+<a class="program-item program-featured" href="#bubble-works"><div class="program-image-wrap"><img class="program-image" src="program-assets/bubble-daytime.png" alt="青空の下でシャボン玉を楽しむ子供たち"></div><div class="program-heading"><strong>バブルワークスさんと遊ぼう！</strong></div><small><b class="program-subtitle">シャボン玉ショー&amp;遊び場</b>ナイトバブルで夜空を彩ったバブルワークスが、今度はお昼のこどあそフェスにやってくる！<br>ギネス世界記録公式認定を持つプロと一緒に遊ぼう！</small></a>
 <a class="program-item" href="#music"><div class="program-image-wrap"><img class="program-image" src="program-assets/iwamoto-03.jpg" alt="音楽家の岩本象一さん"></div><div class="program-heading"><strong>音楽家と音で遊ぼう！</strong></div><small>音楽をただ「聴く」だけではなく、一緒に音を鳴らして、感じて“音で遊ぶ”体験を</small></a>
 <a class="program-item" href="#bmx"><div class="program-image-wrap"><img class="program-image" src="program-assets/bmx-01.jpg" alt="子供たちがBMXを体験する様子"></div><div class="program-heading"><strong>BMXに挑戦しよう！</strong></div><small>元全日本チャンピオンの先生とBMXの楽しさを体験しよう♫<br>初めてでも大歓迎！</small></a>
 <a class="program-item" href="#cardboard-maze"><div class="program-image-wrap"><img class="program-image" src="program-assets/cardboard-dark-exploration.png" alt="屋外の段ボール迷路に挑戦する子供たち"></div><div class="program-heading"><strong>ダンボール迷路</strong></div><small>ARTチームがつくる大きな迷路を攻略しよう！考える力と冒険心を刺激しゴールへ♫</small></a>
