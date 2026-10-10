@@ -11,6 +11,8 @@ Macへ引き継ぐ場合は、最初に `Mac引き継ぎ.md` を読んでくだ�
 
 2026-10-10の引き継ぎ最新版は **`codex/mac-handoff-20261010`** ブランチです。画像差し替えとこども選挙の追加を含みます。Macでもこのブランチを選んでください。
 
+同日の修正は公開用の `main` にも反映します。外部確認用ページ：<https://bossgane.github.io/GhubGroup/events/kodomoaso-fes-2026/>。今後の編集は引き続き作業ブランチで進め、公開の指示後に `main` へ反映してください。
+
 ```bash
 cd ~/Documents/CODEX/projects/GhubGroup
 git status
