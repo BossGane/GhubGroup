@@ -108,11 +108,13 @@ a{color:inherit;text-decoration:none}
 .bmx-instructor{font-size:17px;font-weight:700;margin:0 0 20px}
 .feature-lead{font-size:clamp(18px,2.2vw,28px);line-height:1.65;max-width:900px;margin:0}
 .bubble-section{background:#e4ebe6;color:var(--ink)}
-.bubble-section h2{color:var(--ink)}
-.bubble-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:5vw;align-items:start}
-.bubble-photo{display:block;width:100%;aspect-ratio:16/7;object-fit:cover;margin-bottom:42px}
-.bubble-schedule{border-top:1px solid #aab8ad}
-.bubble-slot{display:grid;grid-template-columns:190px 1fr;gap:24px;padding:22px 0;border-bottom:1px solid #aab8ad}
+.bubble-section h2{color:var(--ink);font-size:clamp(28px,3.5vw,48px);line-height:1.4;letter-spacing:-.03em}
+.bubble-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:5vw;align-items:start}
+.bubble-photo{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;margin:0}
+.bubble-content p{font-size:16px;line-height:1.9;margin:0 0 24px}
+.bubble-content h3{font-size:24px;line-height:1.4;margin:30px 0 12px}
+.bubble-schedule{border-top:1px solid #aab8ad;margin-top:40px}
+.bubble-slot{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center;padding:22px 0;border-bottom:1px solid #aab8ad}
 .bubble-slot time{font-size:clamp(22px,2.6vw,34px);font-weight:800}
 .bubble-slot h3{font-size:22px;margin:3px 0 8px}
 .bubble-slot p{color:#46534a;line-height:1.7;margin:0}
@@ -284,7 +286,7 @@ a{color:inherit;text-decoration:none}
 <a class="program-item" href="#program"><div class="program-image-wrap"><img class="program-image" src="program-assets/crayon-drawing.jpg" alt="クレヨンで自由に絵を描く子供の手"></div><div class="program-heading"><strong>自由にお絵かき</strong></div><small>正解のない自由なお絵描き！<br>安心な素材のクレヨンで小さな子も楽しく遊ぼう♫</small></a>
 <a class="program-item" href="#program"><div class="program-image-wrap"><img class="program-image" src="program-assets/stamp-rally-play.png" alt="スタンプラリーの用紙にスタンプを押す子供たち"></div><div class="program-heading"><strong>スタンプラリー</strong></div><small>会場を巡って隠れたスタンプを集める、家族みんなの小さな冒険です。</small></a>
 <a class="program-item" href="#program"><div class="program-image-wrap"><img class="program-image" src="program-assets/workshop-beads.png" alt="屋外のワークショップでビーズを選びアクセサリーを作る子供たち"></div><div class="program-heading"><strong>体験ワークショップ</strong></div><small>つくる、試す、夢中になる。子供の好奇心をひらく体験がそろいます。</small></a>
-<a class="program-item program-featured" href="#program"><div class="program-image-wrap"><img class="program-image" src="program-assets/food-market-bowl.png" alt="フードトラックで料理を受け取る子供"></div><div class="program-heading"><strong>おいしいもの広場</strong></div><small>こだわりの詰まったおいしいものが大集合！<br>お昼ごはんはもちろん、おやつや軽食、ドリンクも。<br><br>作り手さんとの出会いも楽しみながら、<br>お気に入りの一品を見つけよう！</small></a>
+<a class="program-item program-featured" href="#program"><div class="program-image-wrap"><img class="program-image" src="program-assets/food-market-bowl.png" alt="フードトラックで料理を受け取る子供"></div><div class="program-heading"><strong>おいしいもの広場</strong></div><small>こだわりの詰まったおいしいものが大集合！<br>お昼ごはんはもちろん、おやつや軽食、ドリンクも。<br>作り手さんとの出会いも楽しみながら、お気に入りの一品を見つけよう！</small></a>
 </div></div>
 <div class="section-head" id="timetable" style="margin-top:90px"><h2 class="japanese-heading">タイムテーブル</h2><span class="label">2026.12.06 SUN</span></div>
 <ul class="schedule-legend" aria-label="プログラムの色分け"><li class="schedule-bubble">バブルワークス</li><li class="schedule-music">音楽</li><li class="schedule-bmx">BMX</li><li class="schedule-slipper">スリッパ飛ばし</li><li class="schedule-santa">サンタ</li></ul>
@@ -296,14 +298,30 @@ a{color:inherit;text-decoration:none}
 <div class="schedule-row schedule-music"><time>11:00</time><div><span class="schedule-type">音楽家・岩本象一さん</span><strong><a class="schedule-name" href="#music">音楽演奏</a></strong><p><b>予約無し</b>・人数制限あり</p></div></div>
 <div class="schedule-row schedule-bubble"><time>11:30〜12:30</time><div><span class="schedule-type">バブルワークス</span><strong><a class="schedule-name" href="#bubble-works">🫧 シャボン玉の遊び場</a></strong></div></div>
 <div class="schedule-row schedule-slipper"><time>12:30〜13:00</time><div><strong><a class="schedule-name" href="#slipper-contest">スリッパ飛ばし大会</a></strong><p>参加無料・当日12:00までにエントリー</p></div></div>
-<div class="schedule-row schedule-bubble"><time>13:15〜13:45</time><div><span class="schedule-type">バブルワークス</span><strong><a class="schedule-name" href="#bubble-works">🫧 シャボン玉ショー</a></strong></div></div>
+<div class="schedule-row schedule-bubble"><time>13:00</time><div><span class="schedule-type">バブルワークス</span><strong><a class="schedule-name" href="#bubble-works">🫧 シャボン玉ショー</a></strong></div></div>
 <div class="schedule-row schedule-music"><time>14:00</time><div><span class="schedule-type">音楽家・岩本象一さん</span><strong><a class="schedule-name" href="#music">音楽演奏</a></strong><p><b>予約無し</b>・人数制限あり</p></div></div>
 <div class="schedule-row schedule-santa" id="santa-program"><time>14:30〜15:30</time><div><strong><a class="schedule-name" href="#santa-arrives">サンタクロース</a></strong><p>時間内に2回登場予定です。</p></div></div>
 <div class="schedule-row schedule-gate"><time>15:30</time><div><strong>イベント終了</strong></div></div>
 </div>
 <aside class="schedule-notes"><h3>ワークショップの参加条件</h3><p>音楽ワークショップ・体験ワークショップ：<b>予約無し</b>・人数制限あり</p></aside>
 </section>
-<section class="section bubble-section" id="bubble-works"><div class="section-head"><h2>BUBBLE WORKS</h2><span class="label">SHOW / PLAYGROUND</span></div><img class="bubble-photo" src="program-assets/bubble-daytime.png" alt="青空の下でシャボン玉を楽しむ子供たち"><div class="bubble-layout"><div><p class="feature-lead">午前と午後のシャボン玉ショーと、自由に楽しめる遊び場。家族みんなでシャボン玉の景色を楽しめるプログラムです。</p></div><div class="bubble-schedule"><article class="bubble-slot"><time>10:30〜11:00</time><div><h3>🫧 シャボン玉ショー</h3><p>午前の空いっぱいに広がるシャボン玉を楽しもう。</p></div></article><article class="bubble-slot"><time>11:30〜12:30</time><div><h3>🫧 シャボン玉の遊び場</h3><p>子供たちが自分で遊べる体験時間です。</p></div></article><article class="bubble-slot"><time>13:15〜13:45</time><div><h3>🫧 シャボン玉ショー</h3><p>午後から来場する家族も楽しめる2回目のショー。</p></div></article></div></div></section>
+<section class="section bubble-section" id="bubble-works">
+<div class="section-head"><h2>バブルワークスさんと遊ぼう！</h2><span class="label">SHOW / PLAYGROUND</span></div>
+<div class="bubble-layout">
+<img class="bubble-photo" src="program-assets/bubble-daytime.png" alt="青空の下でシャボン玉を楽しむ子供たち">
+<div class="bubble-content">
+<p>ギネス世界記録公式認定を持つプロ「バブルワークス」さんと一緒に遊ぼう。<br>ショーとシャボン玉の遊び場の時間があります。</p>
+<h3>ショー</h3>
+<p>会場のみんなと声をかけ合いながらお届けする、笑顔いっぱいのショーです。<br>小さなお子さまから大人まで、どなたでも楽しめます。</p>
+<h3>遊び場</h3>
+<p>シャボン玉をとばしたり、追いかけたり、さわってみたり。いろいろな道具で、思いきりシャボン玉あそびを楽しめます。</p>
+</div>
+</div>
+<div class="bubble-schedule" aria-label="バブルワークスの開催時間">
+<article class="bubble-slot"><h3>バブルショー</h3><time>①10:30　②13:00</time></article>
+<article class="bubble-slot"><h3>遊び場</h3><time>11:30〜12:30</time></article>
+</div>
+</section>
 <section class="section contest-section" id="slipper-contest"><div class="section-head"><h2>スリッパ飛ばし<span class="mobile-break"></span>大会</h2><div class="contest-mark"><svg class="contest-pictogram" viewBox="0 0 160 160" role="img" aria-label="足からスリッパが飛び出すピクトグラム"><use href="#slipper-contest-icon"/></svg><span class="label">ENTRY CLOSE / 12:00</span></div></div><div class="contest-callout"><div class="contest-copy"><h3>飛ばせ、ねらえ、<br>豪華景品をつかみ取れ。</h3><p>大人の部と子供の部で開催。思いきりスリッパを飛ばして、会場の一番を目指そう。各部門の優勝者には豪華景品をプレゼントします。</p><div class="prize-grid"><div class="prize-item"><small>大人の部 優勝賞品</small><b>ファミリーおでかけギフト<br>10,000円相当</b><span class="provisional">※仮設定・景品は変更予定です</span></div><div class="prize-item"><small>子供の部 優勝賞品</small><b>人気おもちゃ＆<br>お菓子セット</b><span class="provisional">※仮設定・景品は変更予定です</span></div></div></div><aside class="entry-box"><div class="contest-start"><small>START</small><strong>12:30</strong></div><span class="label">ENTRY</span><strong>参加無料</strong><p>当日12:00までに会場でエントリーしてください。</p></aside></div></section>
 <section class="section" id="music"><div class="section-head"><h2>音楽家と遊ぼう！</h2><span class="label">MUSIC PROGRAM</span></div><p class="music-lead">音楽家・岩本象一さんと、音楽をただ「聴く」だけではなく、一緒に音を鳴らして、感じて“音で遊ぶ”体験を。</p><div class="participation-note" aria-label="音楽プログラムの参加条件"><strong>予約無し</strong><span>人数制限あり</span></div><div class="music-gallery"><img src="program-assets/iwamoto-01.jpg" alt="演奏中の音楽家・岩本象一さん"><img src="program-assets/iwamoto-02.jpg" alt="楽器を演奏する岩本象一さん"><img src="program-assets/iwamoto-03.jpg" alt="音の道具を手にする岩本象一さん"></div><div class="music-grid"><article class="music-item"><time>11:00</time><h3>音楽演奏</h3><p>会場で楽しむライブパフォーマンス。</p></article><article class="music-item"><time>12:00</time><h3>音楽ワークショップ</h3><p>約20分。親子で音を鳴らし、音楽を楽しみます。</p><p><b>予約無し</b>・人数制限あり</p></article><article class="music-item"><time>14:00</time><h3>音楽演奏</h3><p>午後のライブパフォーマンス。</p></article></div></section>
 <section class="section bmx-section" id="bmx"><div class="section-head"><h2>BMX</h2><span class="label">RIDE / CHALLENGE</span></div><img class="bmx-photo" src="program-assets/bmx-02.jpg" alt="サムライドBMXの講師による実演"><div class="bmx-layout"><div><p class="bmx-lead">サムライドBMX</p><p class="bmx-copy">はじめてでも楽しめるBMX体験。講師と一緒に、自転車を操る面白さと新しい動きに挑戦します。</p><p class="bmx-session">10:30〜 複数回開催</p><div class="participation-note" aria-label="BMXの参加条件"><strong>予約優先</strong><span>人数制限あり</span></div><p class="bmx-instructor">講師：勅使川原 大地</p></div><div class="bmx-links"><a class="bmx-link" href="https://www.instagram.com/samuride_bmxclub/" target="_blank" rel="noopener noreferrer"><span>サムライドBMX</span><span>Instagram ↗</span></a><a class="bmx-link" href="https://www.instagram.com/daichiteshigram/" target="_blank" rel="noopener noreferrer"><span>講師</span><span>Instagram ↗</span></a></div></div></section>
