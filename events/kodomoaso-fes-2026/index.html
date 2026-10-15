@@ -261,28 +261,33 @@ a{color:inherit;text-decoration:none}
 .ticket-button{width:100%;margin-top:28px}
 .footer{display:block;line-height:2}
 }
-/* Shared activity details: title and photo, full-width copy, then times. */
-.activity-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:5vw;margin-bottom:36px}
-.activity-detail .activity-head h2{font-size:clamp(22px,3.2vw,44px);line-height:1.4;letter-spacing:-.03em;overflow-wrap:anywhere}
+/* Shared activity details: consistent typography and spacing for every activity. */
+.activity-detail{--detail-title-size:clamp(22px,3.2vw,44px);--detail-body-size:16px;--detail-heading-size:22px;--detail-time-size:26px;padding-block:80px}
+.activity-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:5vw;margin-bottom:32px}
+.activity-detail .activity-head h2{font-size:var(--detail-title-size);font-weight:800;line-height:1.4;letter-spacing:-.03em;overflow-wrap:anywhere}
 .activity-media{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;min-width:0}
 .activity-media img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;margin:0}
 .activity-media img:only-child{grid-column:1 / -1}
 .activity-media img:nth-child(3){grid-column:1 / -1}
 .activity-body{width:100%;min-width:0}
-.activity-detail .bubble-content p,.activity-detail .contest-copy p{font-size:16px}
-.activity-detail .activity-body p{line-height:1.6;margin-top:0;margin-bottom:12px}
-.activity-detail .activity-body .santa-lead,.activity-detail .activity-body .bmx-lead,.activity-detail .activity-body .music-lead,.activity-detail .activity-body .election-lead{line-height:1.35}
-.activity-detail .activity-body h3{margin-top:20px;margin-bottom:8px}
+.activity-detail .activity-body p{font-size:var(--detail-body-size);line-height:1.6;margin:0 0 12px;max-width:none}
+.activity-detail .activity-body h3{font-size:var(--detail-heading-size);font-weight:800;line-height:1.4;margin:20px 0 8px}
 .activity-detail .activity-body h3:first-child{margin-top:0}
-.activity-detail .santa-copy{max-width:none}
+.activity-detail .activity-body .activity-lead{font-size:var(--detail-heading-size);font-weight:800;line-height:1.5;margin:0 0 16px;letter-spacing:0}
+.activity-detail .activity-body .participation-note{font-size:var(--detail-body-size);line-height:1.6;margin:16px 0}
 .activity-timing{margin-top:32px}
+.activity-detail .activity-timing time,.activity-detail .activity-timing .santa-time,.activity-detail .activity-timing .contest-time,.activity-detail .activity-timing .bmx-session{font-size:var(--detail-time-size);font-weight:800;line-height:1.4}
+.activity-detail .activity-timing h3{font-size:var(--detail-heading-size);font-weight:800;line-height:1.4;margin:0 0 8px}
+.activity-detail .activity-timing p:not(.santa-time):not(.contest-time):not(.bmx-session){font-size:var(--detail-body-size);line-height:1.6}
 .activity-timing .bubble-schedule,.activity-timing .santa-time,.activity-timing .contest-time,.activity-timing .music-grid{margin-top:0}
 .activity-timing .bmx-session{border-top:1px solid var(--line);padding-top:24px;margin-top:0}
 .activity-body .bmx-links{margin-top:24px}
+.activity-detail .maze-options{margin:0;gap:24px}
+.activity-detail .maze-option{min-height:0;padding:24px}
 @media(max-width:700px){
+.activity-detail{--detail-title-size:clamp(20px,5.6vw,30px);--detail-heading-size:20px;--detail-time-size:22px;padding-block:56px}
 .activity-head{gap:16px;margin-bottom:28px}
 .activity-media{gap:6px}
-.activity-detail .activity-head h2{font-size:clamp(20px,5.6vw,30px)}
 .activity-detail .mobile-break{display:none}
 }
 </style>
@@ -342,7 +347,7 @@ a{color:inherit;text-decoration:none}
 <section class="section bubble-section activity-detail" id="bubble-works">
 <div class="activity-head"><h2>バブルワークスさんと遊ぼう！</h2><div class="activity-media"><img class="activity-photo" src="program-assets/bubble-daytime.png" alt="青空の下でシャボン玉を楽しむ子供たち">
 </div></div><div class="activity-body"><div class="bubble-content">
-<p><strong>観てワクワク！遊んで夢中に！</strong></p>
+<p class="activity-lead"><strong>観てワクワク！遊んで夢中に！</strong></p>
 <p>ギネス世界記録公式認定を持つシャボン玉のプロ「バブルワークス」さんと一緒に楽しもう！</p>
 <p>大きなシャボン玉や不思議な形のシャボン玉。プロのショーを観るだけでなく、自分で飛ばして遊べる特別な体験も♫</p>
 <h3>バブルショー</h3>
@@ -357,7 +362,7 @@ a{color:inherit;text-decoration:none}
 </div></section>
 <section class="section santa-section activity-detail" id="santa-arrives">
 <div class="activity-head"><h2>サンタさんと撮影</h2><div class="activity-media"><img src="program-assets/santa-01.jpg" alt="プレゼントに囲まれたサンタクロース" class="activity-photo"><img src="program-assets/santa-02.jpg" alt="明かりに包まれたサンタクロース" class="activity-photo"></div></div><div class="activity-body"><div class="santa-content">
-<p class="santa-lead">遠い北の国から、サンタクロースがやってくる！</p>
+<p class="santa-lead activity-lead">遠い北の国から、サンタクロースがやってくる！</p>
 <p class="santa-copy">真っ赤な衣装に大きな体、やさしい笑顔のサンタさんが、こどあそフェスに登場！</p>
 <p class="santa-copy">会場には特別なフォトスポットをご用意。サンタさんと並んで、家族みんなで記念撮影を楽しもう♫</p>
 <p class="santa-copy">ひと足早いクリスマス。家族の思い出に残る、とっておきの一枚を！</p>
@@ -369,7 +374,7 @@ a{color:inherit;text-decoration:none}
 <section class="section contest-section activity-detail" id="slipper-contest">
 <div class="activity-head"><h2>スリッパ飛ばし<span class="mobile-break"></span>大会</h2><div class="activity-media"><img class="activity-photo" src="program-assets/slipper-play.png" alt="青空へ履物を飛ばして遊ぶ子供たち">
 </div></div><div class="activity-body"><div class="contest-copy">
-<h3>思いっきり飛ばして、目指せNo.1！</h3>
+<h3 class="activity-lead">思いっきり飛ばして、目指せNo.1！</h3>
 <p>スリッパをどこまで遠くに飛ばせるかな？</p>
 <p>ルールはシンプル！思いっきりスリッパを飛ばして、飛距離を競う大会です。</p>
 <p>見事優勝した方には、豪華景品をご用意！</p>
@@ -379,12 +384,12 @@ a{color:inherit;text-decoration:none}
 </div><div class="activity-timing"><p class="contest-time"><strong>開催時間　13:45</strong></p>
 <p class="contest-note">※エントリー方法等は、後日公開予定です。</p>
 </div></section>
-<section class="section bmx-section activity-detail" id="bmx"><div class="activity-head"><h2>BMX</h2><div class="activity-media"><img class="activity-photo" src="program-assets/bmx-02.jpg" alt="サムライドBMXの講師による実演"></div></div><div class="activity-body"><div><p class="bmx-lead">サムライドBMX</p><p class="bmx-copy">はじめてでも楽しめるBMX体験。講師と一緒に、自転車を操る面白さと新しい動きに挑戦します。</p><div class="participation-note" aria-label="BMXの参加条件"><strong>予約優先</strong><span>人数制限あり</span></div><p class="bmx-instructor">講師：勅使川原 大地</p></div><div class="bmx-links"><a class="bmx-link" href="https://www.instagram.com/samuride_bmxclub/" target="_blank" rel="noopener noreferrer"><span>サムライドBMX</span><span>Instagram ↗</span></a><a class="bmx-link" href="https://www.instagram.com/daichiteshigram/" target="_blank" rel="noopener noreferrer"><span>講師</span><span>Instagram ↗</span></a></div></div><div class="activity-timing"><p class="bmx-session">10:30〜 複数回開催</p></div></section>
-<section class="section activity-detail" id="music"><div class="activity-head"><h2>音楽家と遊ぼう！</h2><div class="activity-media"><img src="program-assets/iwamoto-01.jpg" alt="演奏中の音楽家・岩本象一さん" class="activity-photo"><img src="program-assets/iwamoto-02.jpg" alt="楽器を演奏する岩本象一さん" class="activity-photo"><img src="program-assets/iwamoto-03.jpg" alt="音の道具を手にする岩本象一さん" class="activity-photo"></div></div><div class="activity-body"><p class="music-lead">音楽家・岩本象一さんと、音楽をただ「聴く」だけではなく、一緒に音を鳴らして、感じて“音で遊ぶ”体験を。</p><div class="participation-note" aria-label="音楽プログラムの参加条件"><strong>予約無し</strong><span>人数制限あり</span></div></div><div class="activity-timing"><div class="music-grid"><article class="music-item"><time>11:00</time><h3>音楽演奏</h3><p>会場で楽しむライブパフォーマンス。</p></article><article class="music-item"><time>12:00</time><h3>音楽ワークショップ</h3><p>約20分。親子で音を鳴らし、音楽を楽しみます。</p><p><b>予約無し</b>・人数制限あり</p></article><article class="music-item"><time>14:00</time><h3>音楽演奏</h3><p>午後のライブパフォーマンス。</p></article></div></div></section>
+<section class="section bmx-section activity-detail" id="bmx"><div class="activity-head"><h2>BMX</h2><div class="activity-media"><img class="activity-photo" src="program-assets/bmx-02.jpg" alt="サムライドBMXの講師による実演"></div></div><div class="activity-body"><div><p class="bmx-lead activity-lead">サムライドBMX</p><p class="bmx-copy">はじめてでも楽しめるBMX体験。講師と一緒に、自転車を操る面白さと新しい動きに挑戦します。</p><div class="participation-note" aria-label="BMXの参加条件"><strong>予約優先</strong><span>人数制限あり</span></div><p class="bmx-instructor">講師：勅使川原 大地</p></div><div class="bmx-links"><a class="bmx-link" href="https://www.instagram.com/samuride_bmxclub/" target="_blank" rel="noopener noreferrer"><span>サムライドBMX</span><span>Instagram ↗</span></a><a class="bmx-link" href="https://www.instagram.com/daichiteshigram/" target="_blank" rel="noopener noreferrer"><span>講師</span><span>Instagram ↗</span></a></div></div><div class="activity-timing"><p class="bmx-session">10:30〜 複数回開催</p></div></section>
+<section class="section activity-detail" id="music"><div class="activity-head"><h2>音楽家と遊ぼう！</h2><div class="activity-media"><img src="program-assets/iwamoto-01.jpg" alt="演奏中の音楽家・岩本象一さん" class="activity-photo"><img src="program-assets/iwamoto-02.jpg" alt="楽器を演奏する岩本象一さん" class="activity-photo"><img src="program-assets/iwamoto-03.jpg" alt="音の道具を手にする岩本象一さん" class="activity-photo"></div></div><div class="activity-body"><p class="music-lead activity-lead">音楽家・岩本象一さんと、音楽をただ「聴く」だけではなく、一緒に音を鳴らして、感じて“音で遊ぶ”体験を。</p><div class="participation-note" aria-label="音楽プログラムの参加条件"><strong>予約無し</strong><span>人数制限あり</span></div></div><div class="activity-timing"><div class="music-grid"><article class="music-item"><time>11:00</time><h3>音楽演奏</h3><p>会場で楽しむライブパフォーマンス。</p></article><article class="music-item"><time>12:00</time><h3>音楽ワークショップ</h3><p>約20分。親子で音を鳴らし、音楽を楽しみます。</p><p><b>予約無し</b>・人数制限あり</p></article><article class="music-item"><time>14:00</time><h3>音楽演奏</h3><p>午後のライブパフォーマンス。</p></article></div></div></section>
 <section class="section maze-section activity-detail" id="cardboard-maze"><div class="activity-head"><h2>巨大段ボール迷路＆ダンジョン</h2><div class="activity-media"><img class="activity-photo" src="program-assets/cardboard-maze-01.jpg" alt="体育館いっぱいに広がる巨大段ボール迷路"><img class="activity-photo" src="program-assets/cardboard-dark-exploration.png" alt="段ボールのトンネルへ入って探検する子供"></div></div><div class="activity-body"><div class="maze-options"><article class="maze-option"><div><h3>巨大段ボール迷路</h3><p>複数のアイテムを探しだし、コンプリートできたらゴールを目指そう！</p></div><svg class="maze-symbol" viewbox="0 0 80 80" role="img" aria-label="迷路のアイコン"><path d="M12 68V12h56v56H28V28h24v24H40V40"></path></svg></article><article class="maze-option"><div><h3>暗闇ダンジョン</h3><p>ハンドライトのあかりを頼りにダンジョンを攻略しよう！ドキドキする探検コース</p></div><svg class="maze-symbol" viewbox="0 0 80 80" role="img" aria-label="ダンジョンのアイコン"><circle cx="34" cy="40" r="13"></circle><path d="M47 32l20-12M49 40h22M47 48l20 12M15 60l10-10"></path></svg></article></div></div></section>
 <section class="section election-section activity-detail" id="kodomo-election">
 <div class="activity-head"><h2>こども選挙</h2><div class="activity-media"><img class="activity-photo" src="program-assets/election-characters.jpg" alt="ポンカースフィニアの色とりどりのモンスターたち"></div></div><div class="activity-body"><div class="election-copy">
-<p class="election-lead">勝ち負けではなく、<br>「自分で選ぶ」という体験。</p>
+<p class="election-lead activity-lead">勝ち負けではなく、<br>「自分で選ぶ」という体験。</p>
 <p>投票して、結果にちょっとドキドキする。<br>そんな体験を、子どもたちに届けたい。</p>
 <p>選挙を特別なものではなく、<br>「えらぶって、たのしい。」<br>そんな感覚からはじめられたら嬉しいです。</p>
 <p class="election-question">ぜひ、お子さまに<br>「どうしてそれを選んだの？」と聞いてみてください。<br>その理由を一生懸命に伝える時間も、きっと大切な学びです。</p>
